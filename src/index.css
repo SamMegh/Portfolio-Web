@@ -1,9 +1,33 @@
 @import "tailwindcss";
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-  background-color: black;
+  background-color: black; */
+  background-color: #242424;
 }
 
+.homeScreenListItems{
+  list-style: none;
+  display: inline-block;
+  margin: 26px 25px;
+}
+.homeScreentListItemAnchorTag{
+color: #fff;
+text-decoration: none;
+font-size: 26px;
+position: relative;
+}
+.homeScreentListItemAnchorTag::before{
+content: "";
+position: absolute;
+top: 52%;
+left: -10%;
+width: 0;
+height: 2px;
+background: #fff;
+transition: all ease 0.5s ;
+}
+.homeScreentListItemAnchorTag:hover::before{
+  width: 120%;
+}
