@@ -2,20 +2,22 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: black; */
-  background-color: #242424;
+  background-color: black; 
+  color: rgb(255, 255, 255);
+  background-color: #242424;*/
+  color: #000;
 }
 
 .homeScreenListItems{
   list-style: none;
   display: inline-block;
   margin: 26px 25px;
+  position: relative;
 }
 .homeScreentListItemAnchorTag{
 color: #fff;
 text-decoration: none;
-font-size: 26px;
+font-size: 24px;
 position: relative;
 }
 .homeScreentListItemAnchorTag::before{
