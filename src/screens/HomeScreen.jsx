@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import Navbar from "../components/navbar";
 import TopMostPage from "../components/topmostpage";
+import ProjectTab from "../components/projecttab";
 
 function HomeScreen() {
   // for mobile UI
@@ -22,6 +23,7 @@ function HomeScreen() {
       <div className="wrapper overflow-hidden">
         <Navbar/>
         <TopMostPage/>
+        <ProjectTab/>
 
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eveniet! Id ipsam dolore aliquam facilis earum corporis corrupti a amet nam optio, dolores laboriosam cumque delectus. Nulla veniam voluptatum maxime?

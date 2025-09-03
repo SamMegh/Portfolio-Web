@@ -1,7 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import logo from "../assets/logo.jpg";
 export default function Navbar() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const initial = `M 10 80 Q 0 80 ${width} 80`;
+
+    const handleMouseEnter = (e) => {
+      gsap.to("svg path", {
+        attr: { d: `M 0 80 Q ${e.x} ${e.y} ${width} 80` },
+        duration: 0.3,
+        ease: "power3.out",
+      });
+    };
+    const handleMouseLeave = ()=>{
+       gsap.to("svg path", {
+        attr: { d: initial},
+        duration:2.5,
+ease: "elastic.out(1,0.3)",
+      })
+    }
   useEffect(() => {
     gsap
       .timeline({ ease: "power1.easeInOut" })
@@ -30,11 +47,35 @@ export default function Navbar() {
           stagger: 0.1,
         },
         "-=0.4"
+      ).fromTo(
+        "svg path",
+        { y: -100 },
+        {
+          duration: 0.5,
+          y: 0,
+          stagger: 0.1,
+        },
+        "-=0.4"
       );
+
+    // animate the SVG
+ const svg = document.querySelector("svg");
+    if (!svg) return; // safeguard
+    svg.addEventListener("mousemove", handleMouseEnter);
+    svg.addEventListener("mouseleave", handleMouseLeave);
+
+    // for setting the width of SVG
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
-    <div>
-      <header className="fixed left-0 z-[10] w-full flex justify-between items-center bg-[rgba(0,0,0,0.3)] backdrop-blur-[4px] px-[2vw] py-0 ">
+    <div
+      className="
+    absolute left-0 z-[10] w-full"
+    >
+      <header className=" flex justify-between items-center bg-[rgba(0,0,0,0.1)] backdrop-blur-[2px] px-[2vw] py-0 ">
         {/* Logo */}
         <div className="logo">
           <img
@@ -110,6 +151,14 @@ export default function Navbar() {
         </div>
       )} */}
       </header>
+
+      <svg className="w-[100%] z-[20] mt-[-80px] h-[30vh] ">
+        <path
+          d={`M 10 80 Q 0 80 ${width} 80`}
+          stroke="white"
+          fill="transparent"
+        />
+      </svg>
     </div>
   );
 }

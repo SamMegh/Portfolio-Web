@@ -1,6 +1,5 @@
 import gsap from 'gsap';
-import React, { useEffect } from 'react'
-import backgroundImage1 from "../assets/background2.png";
+import React, { useEffect } from 'react';
 
 export default function TopMostPage() {
     useEffect(()=>{
@@ -23,7 +22,6 @@ export default function TopMostPage() {
       <div
           className="content relative select-none"
           style={{
-            backgroundImage: `url(${backgroundImage1})`,
             backgroundSize: "cover", // optional
             backgroundPosition: "center", // optional
           }}
