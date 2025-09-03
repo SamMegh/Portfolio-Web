@@ -1,24 +1,28 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+// import samimage from "../assets/Profile_Photo.png";
+// import { useState } from "react";
 import gsap from "gsap";
 import logo from "../assets/logo.jpg";
 export default function Navbar() {
+  // for mobile UI
+  // const [menu, setMenu] = useState(false)
   const [width, setWidth] = useState(window.innerWidth);
   const initial = `M 10 80 Q 0 80 ${width} 80`;
 
-    const handleMouseEnter = (e) => {
-      gsap.to("svg path", {
-        attr: { d: `M 0 80 Q ${e.x} ${e.y} ${width} 80` },
-        duration: 0.3,
-        ease: "power3.out",
-      });
-    };
-    const handleMouseLeave = ()=>{
-       gsap.to("svg path", {
-        attr: { d: initial},
-        duration:2.5,
-ease: "elastic.out(1,0.3)",
-      })
-    }
+  const handleMouseEnter = (e) => {
+    gsap.to("svg path", {
+      attr: { d: `M 0 80 Q ${e.x} ${e.y} ${width} 80` },
+      duration: 0.3,
+      ease: "power3.out",
+    });
+  };
+  const handleMouseLeave = () => {
+    gsap.to("svg path", {
+      attr: { d: initial },
+      duration: 2.5,
+      ease: "elastic.out(1,0.3)",
+    });
+  };
   useEffect(() => {
     gsap
       .timeline({ ease: "power1.easeInOut" })
@@ -47,7 +51,8 @@ ease: "elastic.out(1,0.3)",
           stagger: 0.1,
         },
         "-=0.4"
-      ).fromTo(
+      )
+      .fromTo(
         "svg path",
         { y: -100 },
         {
@@ -59,7 +64,7 @@ ease: "elastic.out(1,0.3)",
       );
 
     // animate the SVG
- const svg = document.querySelector("svg");
+    const svg = document.querySelector("svg");
     if (!svg) return; // safeguard
     svg.addEventListener("mousemove", handleMouseEnter);
     svg.addEventListener("mouseleave", handleMouseLeave);
