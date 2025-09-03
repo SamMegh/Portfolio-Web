@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 // import samimage from "../assets/Profile_Photo.png";
-import backgroundImage1 from "../assets/background2.png";
-import logo from "../assets/logo.jpg";
 // import { useState } from "react";
 import { gsap } from "gsap";
+import Navbar from "../components/navbar";
+import TopMostPage from "../components/topmostpage";
 
 function HomeScreen() {
   // for mobile UI
@@ -14,154 +14,14 @@ function HomeScreen() {
       .timeline({ ease: "power1.easeInOut" })
       .to(".Main-screen", {
         duration: 1,
-      })
-      .fromTo(
-        ".content",
-        { opacity: 0, scale: 1.5 }, // starting point
-        { opacity: 1, scale: 1, duration: 1, stagger: 0.2 }, // end state
-        "-=0.5"
-      )
-      .fromTo(
-        ".samText h1",
-        { opacity: 0, scale: 1.3, y: 50 }, // starting point
-        { opacity: 1, scale: 1, duration: 1, stagger: 0.2 }, // end state
-        "-=0.5"
-      );
-
-    gsap
-      .timeline({ ease: "power1.easeInOut" }).fromTo(
-        "header",{ y: -500 },
-        {
-          duration: 1.2,
-          y: 0,
-        })
-      .fromTo(
-        "header .logo",
-        { y: -100 },
-        {
-          duration: 0.5,
-          y: 0,
-        }
-      )
-      .fromTo(
-        "header .menu li",
-        { y: -100 },
-        {
-          duration: 0.5,
-          y: 0,
-          stagger: 0.1,
-        },
-        "-=0.4"
-      );
+      });
   }, []);
 
   return (
     <div className="Main-screen">
       <div className="wrapper overflow-hidden">
-        <header className="fixed left-0 z-[10] w-full flex justify-between items-center bg-[rgba(0,0,0,0.3)] backdrop-blur-[4px] px-[2vw] py-0 ">
-          {/* Logo */}
-          <div className="logo">
-            <img
-              className="w-[80px] relative p-2 rounded-full overflow-hidden"
-              src={logo}
-              alt="logo"
-            />
-          </div>
-
-          {/* Hamburger Button - visible only on mobile */}
-          {/* <div className="flex-1 flex justify-center sm:hidden">
-        <button
-          onClick={() => setMenu(prev => !prev)}
-          className="flex flex-col justify-center items-center space-y-1.5"
-        >
-          <span className="block w-6 h-0.5 bg-white"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-        </button>
-      </div> */}
-
-          {/* Desktop Menu */}
-          <div className="menu hidden sm:inline-block">
-            <ul className="flex space-x-8">
-              <li className="homeScreenListItems">
-                <a className="homeScreentListItemAnchorTag" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="homeScreenListItems">
-                <a className="homeScreentListItemAnchorTag" href="#">
-                  Projects
-                </a>
-              </li>
-              <li className="homeScreenListItems">
-                <a className="homeScreentListItemAnchorTag" href="#">
-                  Qualification
-                </a>
-              </li>
-              <li className="homeScreenListItems">
-                <a className="homeScreentListItemAnchorTag" href="#">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Mobile Menu */}
-          {/* {menu && (
-        <div className="menu absolute top-[100%] left-0 w-full bg-black text-white sm:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4">
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Home
-              </a>
-            </li>
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Projects
-              </a>
-            </li>
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Qualification
-              </a>
-            </li>
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      )} */}
-        </header>
-        <div
-          className="content relative select-none"
-          style={{
-            backgroundImage: `url(${backgroundImage1})`,
-            backgroundSize: "cover", // optional
-            backgroundPosition: "center", // optional
-          }}
-        >
-          {/* Fullscreen Overlay */}
-          <div className="logoImage relative h-screen flex justify-center items-center overflow-hidden">
-            {/* Image */}
-            {/* <img
-              className="image-inner max-w-full h-auto object-contain z-10"
-              src={samimage}
-              alt="Profile"
-            /> */}
-
-            {/* Text */}
-            <div className="samText absolute top-[-10vh] inset-0 flex flex-col items-center justify-center leading-[0.9] text-center text-[#45d5eeda]">
-              <h1 className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[12vw] tracking-widest font-bold">
-                I'm
-              </h1>
-              <h1 className="text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[14vw] tracking-widest font-extrabold">
-                Sam
-              </h1>
-            </div>
-          </div>
-        </div>
+        <Navbar/>
+        <TopMostPage/>
 
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, eveniet! Id ipsam dolore aliquam facilis earum corporis corrupti a amet nam optio, dolores laboriosam cumque delectus. Nulla veniam voluptatum maxime?
