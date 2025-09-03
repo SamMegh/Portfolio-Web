@@ -30,7 +30,7 @@ export default function Navbar() {
         "header",
         { y: -500 },
         {
-          duration: 1.2,
+          duration: 0.5,
           y: 0,
         }
       )
@@ -38,7 +38,7 @@ export default function Navbar() {
         "header .logo",
         { y: -100 },
         {
-          duration: 0.5,
+          duration: 0.3,
           y: 0,
         }
       )

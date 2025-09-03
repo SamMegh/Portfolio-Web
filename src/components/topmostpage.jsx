@@ -8,7 +8,7 @@ export default function TopMostPage() {
       .fromTo(
         ".content",
         { opacity: 0, scale: 1.5 }, // starting point
-        { opacity: 1, scale: 1, duration: 1, stagger: 0.2 }, // end state
+        { opacity: 1, scale: 1, duration: 1.6, stagger: 0.2 }, // end state
         "-=0.5"
       )
       .fromTo(
