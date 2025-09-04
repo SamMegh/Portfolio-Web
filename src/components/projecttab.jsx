@@ -43,9 +43,16 @@ export default function ProjectTab() {
       color: "bg-red-300",
     },
   ];
-
+  
   useEffect(() => {
     ScrollTrigger.getAll().forEach((st) => st.kill());
+    // Horizontal scroll for projects
+    const container = document.querySelector("#AllProjects");
+  
+    const containerWidth = container.scrollWidth; // total width of all projects
+    const viewportWidth = container.clientWidth;   // visible width
+  
+    const scrollDistance = containerWidth - viewportWidth; // total scroll distance in px
 
     gsap.fromTo(
       ".Project-name",
@@ -56,19 +63,29 @@ export default function ProjectTab() {
         x: 0,
         scrollTrigger: {
           trigger: "#ProjectsSection",
-          scrub: 5,
+          scrub: 2,
           end: "top 40%",
         },
       }
     );
+    gsap.fromTo(
+      "#AllProjects .project",
+      { y: 1500, opacity:0 },
+      {
+        duration: 3.5,
+        ease: "back.out(2)",
+        y: 0,
+        opacity:1,
+        stagger:0.3,
+        scrollTrigger: {
+          trigger: "#ProjectsSection",
+          scrub: 2,
+          start:"top 60%",
+          end: "top -50%",
+        },
+      }
+    );
 
-  // Horizontal scroll for projects
-  const container = document.querySelector("#AllProjects");
-
-  const containerWidth = container.scrollWidth; // total width of all projects
-  const viewportWidth = container.clientWidth;   // visible width
-
-  const scrollDistance = containerWidth - viewportWidth; // total scroll distance in px
 
   gsap.to(container, {
     x: -scrollDistance,
@@ -98,7 +115,7 @@ export default function ProjectTab() {
           {projects.map((proj, i) => (
             <div
               //  w-[100vw] sm:w-[50vw] lg:w-[30vw] h-[30vh]
-              className="project flex flex-row p-4 items-center justify-center gap-5 bg-green-500 rounded-lg flex-none w-[550px] h-[350px] max-w-full "
+              className="project opacity-0 flex flex-row p-4 items-center justify-center gap-5 bg-green-500 rounded-lg flex-none w-[550px] h-[350px] max-w-full "
               key={i}
             >
               <div

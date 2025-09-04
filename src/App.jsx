@@ -12,7 +12,7 @@ function App() {
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 1.5,   // smoothness of scroll
+      smooth: 3,   // smoothness of scroll
       effects: true, // enable parallax/effects
     });
 
