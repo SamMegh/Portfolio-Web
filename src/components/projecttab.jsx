@@ -62,19 +62,26 @@ export default function ProjectTab() {
       }
     );
 
-    gsap.to("#AllProjects", {
-      xPercent: -600,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "#ProjectsSection",
-        start: "top top",
-        end: "+=4000",
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-        markers: true,
-      },
-    });
+  // Horizontal scroll for projects
+  const container = document.querySelector("#AllProjects");
+
+  const containerWidth = container.scrollWidth; // total width of all projects
+  const viewportWidth = container.clientWidth;   // visible width
+
+  const scrollDistance = containerWidth - viewportWidth; // total scroll distance in px
+
+  gsap.to(container, {
+    x: -scrollDistance,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#ProjectsSection",
+      start: "top top",
+      end: () => "+=" + scrollDistance, // scroll length matches exact distance
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
+    },
+  });
   }, []);
 
   return (
