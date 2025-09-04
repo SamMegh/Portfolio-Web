@@ -115,7 +115,7 @@ export default function ProjectTab() {
           {projects.map((proj, i) => (
             <div
               //  w-[100vw] sm:w-[50vw] lg:w-[30vw] h-[30vh]
-              className="project opacity-0 flex flex-row p-4 items-center justify-center gap-5 bg-green-500 rounded-lg flex-none w-[550px] h-[350px] max-w-full "
+              className="project opacity-0 flex flex-row p-4 items-center justify-center gap-5 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] border-[1px] border-solid border-white rounded-lg flex-none w-[550px] h-[350px] max-w-full "
               key={i}
             >
               <div

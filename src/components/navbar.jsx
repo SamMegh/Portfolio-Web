@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 // import samimage from "../assets/Profile_Photo.png";
-// import { useState } from "react";
 import gsap from "gsap";
 import logo from "../assets/logo.jpg";
 export default function Navbar() {
   // for mobile UI
-  // const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const initial = `M 10 80 Q 0 80 ${width} 80`;
 
@@ -73,6 +72,7 @@ export default function Navbar() {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -91,16 +91,30 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Button - visible only on mobile */}
-        {/* <div className="flex-1 flex justify-center sm:hidden">
-        <button
-          onClick={() => setMenu(prev => !prev)}
-          className="flex flex-col justify-center items-center space-y-1.5"
-        >
-          <span className="block w-6 h-0.5 bg-white"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-        </button>
-      </div> */}
+        <div className="flex-1 flex justify-end sm:hidden">
+          <button
+            onClick={() => setMenu((prev) => !prev)}
+            className="relative flex flex-col justify-center items-center w-8 h-8"
+          >
+            {/* Top line */}
+            <span
+              className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out
+        ${menu ? "rotate-45" : "-translate-y-2"}`}
+            ></span>
+
+            {/* Middle line */}
+            <span
+              className={`absolute block h-0.5 w-6 bg-white transition-all duration-300 ease-in-out
+        ${menu ? "opacity-0" : "opacity-100"}`}
+            ></span>
+
+            {/* Bottom line */}
+            <span
+              className={`absolute block h-0.5 w-6 bg-white transform transition-all duration-300 ease-in-out
+        ${menu ? "-rotate-45" : "translate-y-2"}`}
+            ></span>
+          </button>
+        </div>
 
         {/* Desktop Menu */}
         <div className="menu hidden sm:inline-block">
@@ -129,32 +143,34 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {/* {menu && (
-        <div className="menu absolute top-[100%] left-0 w-full bg-black text-white sm:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4">
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Home
-              </a>
-            </li>
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Projects
-              </a>
-            </li>
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Qualification
-              </a>
-            </li>
-            <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      )} */}
+        {menu && (
+          <div
+            className=" absolute  text-white sm:hidden"
+          >
+            <ul className="inline">
+              <li className="homeScreenListItems navBarForMobile ">
+                <a className="homeScreentListItemAnchorTag" href="#">
+                  Home
+                </a>
+              </li>
+              <li className="homeScreenListItems navBarForMobile">
+                <a className="homeScreentListItemAnchorTag" href="#">
+                  Projects
+                </a>
+              </li>
+              <li className="homeScreenListItems navBarForMobile">
+                <a className="homeScreentListItemAnchorTag" href="#">
+                  Qualification
+                </a>
+              </li>
+              <li className="homeScreenListItems navBarForMobile">
+                <a className="homeScreentListItemAnchorTag" href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </header>
 
       <svg className="w-[100%] z-[20] mt-[-80px] h-[30vh] ">
