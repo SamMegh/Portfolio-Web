@@ -8,6 +8,25 @@ export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
   const initial = `M 10 80 Q 0 80 ${width} 80`;
 
+  // const mobileMenu = (isOpen) => {
+  //   if (isOpen) {
+  //     console.log("open");
+  //     gsap.fromTo(
+  //       "#mobilenavscreen .navBarForMobile",
+  //       {
+  //         opacity: 0,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         duration: 3,
+  //       }
+  //     );
+  //   }
+  //   else {
+  //     console.log("close");
+  //   }
+  // };
+
   const handleMouseEnter = (e) => {
     gsap.to("svg path", {
       attr: { d: `M 0 80 Q ${e.x} ${e.y} ${width} 80` },
@@ -72,8 +91,17 @@ export default function Navbar() {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+  if (menu) {
+    gsap.from(
+      "#mobilenavscreen .navBarForMobile",
+      { opacity: 0, right: -5,top:-22, duration:0.5}
+    );
+  }
+}, [menu]);
 
   return (
     <div
@@ -91,9 +119,15 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Button - visible only on mobile */}
-        <div className="flex-1 flex justify-end sm:hidden">
+        <div className="flex-1 z-[10] flex justify-end sm:hidden">
           <button
-            onClick={() => setMenu((prev) => !prev)}
+            onClick={() => {
+              setMenu((prev) => {
+                const newState = !prev;
+                // mobileMenu(newState); // pass the new value
+                return newState;
+              });
+            }}
             className="relative flex flex-col justify-center items-center w-8 h-8"
           >
             {/* Top line */}
@@ -144,26 +178,24 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {menu && (
-          <div
-            className=" absolute  text-white sm:hidden"
-          >
+          <div id="mobilenavscreen" className="  absolute w-fit right-0 text-white sm:hidden">
             <ul className="inline">
-              <li className="homeScreenListItems navBarForMobile ">
+              <li className="homeScreenListItems navBarForMobile top-[-30px] right-[100px]">
                 <a className="homeScreentListItemAnchorTag" href="#">
                   Home
                 </a>
               </li>
-              <li className="homeScreenListItems navBarForMobile">
+              <li className="homeScreenListItems navBarForMobile top-[24px] right-[120px]">
                 <a className="homeScreentListItemAnchorTag" href="#">
                   Projects
                 </a>
               </li>
-              <li className="homeScreenListItems navBarForMobile">
+              <li className="homeScreenListItems navBarForMobile top-[80px] right-[80px]">
                 <a className="homeScreentListItemAnchorTag" href="#">
                   Qualification
                 </a>
               </li>
-              <li className="homeScreenListItems navBarForMobile">
+              <li className="homeScreenListItems navBarForMobile top-[130px] right-[0px]">
                 <a className="homeScreentListItemAnchorTag" href="#">
                   Contact
                 </a>
