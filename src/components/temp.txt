@@ -1,0 +1,61 @@
+     const [width, setWidth] = useState(window.innerWidth);
+  const initial = `M 10 80 Q 0 80 ${width} 80`;
+
+
+  // const mobileMenu = (isOpen) => {
+  //   if (isOpen) {
+  //     console.log("open");
+  //     gsap.fromTo(
+  //       "#mobilenavscreen .navBarForMobile",
+  //       {
+  //         opacity: 0,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         duration: 3,
+  //       }
+  //     );
+  //   }
+  //   else {
+  //     console.log("close");
+  //   }
+  // };
+
+  const handleMouseEnter = (e) => {
+    gsap.to("svg path", {
+      attr: { d: `M 0 80 Q ${e.x} ${e.y} ${width} 80` },
+      duration: 0.3,
+      ease: "power3.out",
+    });
+  };
+  const handleMouseLeave = () => {
+    gsap.to("svg path", {
+      attr: { d: initial },
+      duration: 2.5,
+      ease: "elastic.out(1,0.3)",
+    });
+  };
+   
+    // animate the SVG   //useEffect
+    const svg = document.querySelector("svg");
+    if (!svg) return; // safeguard
+    svg.addEventListener("mousemove", handleMouseEnter);
+    svg.addEventListener("mouseleave", handleMouseLeave);
+
+    // for setting the width of SVG
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  
+
+
+
+
+        {/* <svg className="w-[100%] z-[20] mt-[-80px] h-[30vh] ">
+        <path
+          d={`M 10 80 Q 0 80 ${width} 80`}
+          stroke="white"
+          fill="transparent"
+        />
+      </svg> */}
