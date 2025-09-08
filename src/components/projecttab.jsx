@@ -10,9 +10,11 @@ export default function ProjectTab() {
     {
       name: "MedX Report",
       services: "React + Vite",
-      description:"MedX-Report converts medical test data into comprehensive, professional lab reports—quickly, accurately, and without paper. It's designed to optimize clinical workflows and enhance reporting clarity",
-      imgUrl: "https://github.com/SamMegh/MedX-Report/blob/main/screenshot/Screenshot%202025-09-05%20005045.png?raw=true",
-      readMoreLink:"https://github.com/SamMegh/MedX-Report/"
+      description:
+        "MedX-Report converts medical test data into comprehensive, professional lab reports—quickly, accurately, and without paper. It's designed to optimize clinical workflows and enhance reporting clarity",
+      imgUrl:
+        "https://github.com/SamMegh/MedX-Report/blob/main/screenshot/Screenshot%202025-09-05%20005045.png?raw=true",
+      readMoreLink: "https://github.com/SamMegh/MedX-Report/",
     },
     {
       name: "Project 2",
@@ -83,7 +85,7 @@ export default function ProjectTab() {
           trigger: "#ProjectsSection",
           scrub: 2,
           start: "top 60%",
-          end: "top -50%",
+          end: "top top",
         },
       }
     );
@@ -112,53 +114,53 @@ export default function ProjectTab() {
           Projects
         </p>
 
-        <div id="AllProjects" className="flex gap-10 h-full items-center p-5">
-         {projects.map((proj, i) => (
-  <div
-    key={i}
-    className="
-      project opacity-0 flex flex-col sm:flex-row 
-      items-center justify-center text-center sm:text-left
-      p-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] 
-      border border-white rounded-lg shadow-md
-      w-full sm:w-[800px] h-auto max-w-full
-    "
-  >
-    {/* Image section */}
-    <div className="w-full sm:w-[500px]">
-      <div className="w-full h-[300px]">
-        <img
-          src={proj.imgUrl}
-          alt=""
-          className="w-full h-full object-cover rounded-md"
-        />
-      </div>
-    </div>
+        <div
+          id="AllProjects"
+          className="flex gap-1 sm:gap-10 h-[80vh] items-center p-2 sm:p-5"
+        >
+          {projects.map((proj, i) => (
+            <div
+              key={i}
+              className="
+    project opacity-0 flex flex-col sm:flex-row 
+    items-center justify-center text-center sm:text-left
+    p-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] 
+    border border-white rounded-lg shadow-md
+    min-w-full sm:min-w-[800px] h-[80vh] sm:h-auto max-w-full
+  "
+            >
+              {/* Image section */}
+              <div className="w-full sm:w-[500px]">
+                <div className="w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md">
+                  <img
+                    src={proj.imgUrl}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
-    {/* Text section */}
-    <div className="text text-white w-full sm:max-w-[400px] flex flex-col items-center sm:items-start">
-      <h3 className="title text-[45px] font-semibold">{proj.name}</h3>
-      <h5 className="text-sm mb-2">
-        Services: <span className="font-medium">{proj.services}</span>
-      </h5>
-      <p className="font-light">{proj.description}</p>
-      <button
-        className="
+              {/* Text section */}
+              <div className="text text-white w-full sm:max-w-[400px] flex flex-col items-center sm:items-start">
+                <h3 className="title text-[45px] font-semibold">{proj.name}</h3>
+                <h5 className="text-sm mb-2">
+                  Services: <span className="font-medium">{proj.services}</span>
+                </h5>
+                <p className="font-light">{proj.description}</p>
+                <button
+                  className="
           mt-5 px-8 py-3 text-lg font-bold text-white 
           rounded-full border border-white/30 bg-white/10 
           shadow-md backdrop-blur-md transition-all duration-300 
           hover:scale-105 hover:shadow-xl
         "
-      
-      onClick={() => window.open(proj.readMoreLink, "_blank")}
-      >
-        
-        <span className="relative z-10">Read More</span>
-      </button>
-    </div>
-  </div>
-))}
-
+                  onClick={() => window.open(proj.readMoreLink, "_blank")}
+                >
+                  <span className="relative z-10">Read More</span>
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

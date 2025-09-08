@@ -66,7 +66,7 @@ export default function Navbar() {
   }, [menu]);
 
   return (
-  <div className="fixed sm:bottom-2 sm:right-0 right-2 top-[60%] left-auto sm:left-1/2 sm:-translate-x-1/2  z-[10] w-fit">
+  <div className="fixed right-2 top-[60%] -translate-y-1/2 overflow-hidden left-auto bottom-auto sm:bottom-2 sm:left-1/2 sm:-translate-x-1/2 sm:top-auto sm:translate-y-0 z-[10] w-fit">
       <header className=" flex justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[0.5px] bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] px-[2vw] py-0 ">
         {/* Logo */}
         <div className="logo w-[80px]">
