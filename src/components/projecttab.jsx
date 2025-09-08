@@ -1,14 +1,12 @@
 import gsap from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import projects from '../assets/projects.json';
+import projects from "../assets/projects.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectTab() {
   // All project details in a single variable
-
-
 
   useEffect(() => {
     ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -94,11 +92,23 @@ export default function ProjectTab() {
               {/* Image section */}
               <div className="w-full sm:w-[500px]">
                 <div className="w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md">
-                  <img
-                    src={proj.imgUrl}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
+                  {proj.imgUrl == "none" ? (
+                    <div className="flex flex-col h-full bg-[rgba(0,0,0,0.2)] backdrop-blur-[20px] items-center justify-center px-6  text-center">
+                      <h2 className="text-2xl font-semibold text-white mb-3">
+                        No Image Provided
+                      </h2>
+                      <p className="text-base text-white max-w-md">
+                        There was an issue loading the image. It might be
+                        missing, corrupted, or unavailable at the moment.
+                      </p>
+                    </div>
+                  ) : (
+                    <img
+                      src={proj.imgUrl}
+                      alt={""}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
               </div>
 
