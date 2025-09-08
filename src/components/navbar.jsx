@@ -16,7 +16,7 @@ export default function Navbar() {
         "header",
         { y: 500, opacity: 0 },
         {
-          delay:1,
+          delay:5,
           duration: 0.5,
           y: 0,
           opacity: 1,
@@ -41,16 +41,6 @@ export default function Navbar() {
           stagger: 0.1,
         },
         "-=0.4"
-      )
-      .fromTo(
-        "svg path",
-        { y: -100 },
-        {
-          duration: 0.5,
-          y: 0,
-          stagger: 0.1,
-        },
-        "-=0.4"
       );
   }, []);
 
@@ -67,11 +57,11 @@ export default function Navbar() {
 
   return (
   <div className="fixed right-2 top-[60%] -translate-y-1/2 sm:overflow-hidden left-auto bottom-auto sm:bottom-2 sm:left-1/2 sm:-translate-x-1/2 sm:top-auto sm:translate-y-0 z-[10] w-fit">
-      <header className=" flex justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[0.5px] bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] px-[2vw] py-0 ">
+      <header className=" flex justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[1px] border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.1)] backdrop-blur-[8px] px-[3.5vw] py-0 ">
         {/* Logo */}
-        <div className="logo w-[80px]">
+        <div className="logo w-[40px]">
           <img
-            className="w-[80px] relative p-2 rounded-full overflow-hidden"
+            className="w-[40px] my-[8px] relative rounded-full overflow-hidden"
             src={logo}
             alt="logo"
           />

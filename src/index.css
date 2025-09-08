@@ -42,14 +42,13 @@ body {
 .homeScreenListItems {
   list-style: none;
   display: inline-block;
-  margin: 26px 25px;
   position: relative;
 }
 
 .homeScreentListItemAnchorTag {
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 16px;
   position: relative;
 }
 
@@ -67,6 +66,7 @@ body {
   top: 52%;
   left: -10%;
   width: 0;
+
   height: 2px;
   background: #fff;
   transition: all ease 0.5s;
