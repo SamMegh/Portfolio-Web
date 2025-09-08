@@ -14,26 +14,30 @@ export default function Navbar() {
       .timeline({ ease: "power1.easeInOut" })
       .fromTo(
         "header",
-        { y: -500 },
+        { y: 500, opacity: 0 },
         {
+          delay:1,
           duration: 0.5,
           y: 0,
+          opacity: 1,
         }
       )
       .fromTo(
         "header .logo",
-        { y: -100 },
+        { y: 100, opacity: 0 },
         {
           duration: 0.3,
           y: 0,
+          opacity: 1,
         }
       )
       .fromTo(
         "header .menu li",
-        { y: -100 },
+        { y: 100, opacity: 0 },
         {
           duration: 0.5,
           y: 0,
+          opacity: 1,
           stagger: 0.1,
         },
         "-=0.4"
@@ -48,27 +52,24 @@ export default function Navbar() {
         },
         "-=0.4"
       );
-}, []);
+  }, []);
 
   useEffect(() => {
     if (menu) {
       gsap.from("#mobilenavscreen .navBarForMobile", {
         opacity: 0,
-        right: -5,
-        top: -22,
+        right: 20,
+        top: 25,
         duration: 0.5,
       });
     }
   }, [menu]);
 
   return (
-    <div
-      className="
-    relative z-[10] w-full"
-    >
-      <header className=" flex justify-between items-center bg-[rgba(0,0,0,0.1)] backdrop-blur-[2px] px-[2vw] py-0 ">
+  <div className="fixed sm:bottom-2 sm:right-0 right-2 top-[60%] left-auto sm:left-1/2 sm:-translate-x-1/2  z-[10] w-fit">
+      <header className=" flex justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[0.5px] bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] px-[2vw] py-0 ">
         {/* Logo */}
-        <div className="logo">
+        <div className="logo w-[80px]">
           <img
             className="w-[80px] relative p-2 rounded-full overflow-hidden"
             src={logo}
@@ -77,7 +78,7 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Button - visible only on mobile */}
-        <div className="flex-1 z-[10] flex justify-end sm:hidden">
+        <div className="flex-1 z-[10] p-2 flex justify-end sm:hidden">
           <button
             onClick={() => {
               setMenu((prev) => {
@@ -160,7 +161,7 @@ export default function Navbar() {
                   Projects
                 </a>
               </li>
-               <li className="homeScreenListItems navBarForMobile top-[75px] right-[80px]">
+              <li className="homeScreenListItems navBarForMobile top-[75px] right-[80px]">
                 <a className="homeScreentListItemAnchorTagMobile" href="#">
                   Contact
                 </a>
@@ -170,13 +171,10 @@ export default function Navbar() {
                   Qualification
                 </a>
               </li>
-             
             </ul>
           </div>
         )}
       </header>
-
-
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 import { gsap } from "gsap";
-import Navbar from "../components/navbar";
 import TopMostPage from "../components/topmostpage";
 import ProjectTab from "../components/projecttab";
 
@@ -16,7 +15,7 @@ function HomeScreen() {
   return (
     <div className="Main-screen">
       <div className="wrapper overflow-hidden">
-        <Navbar />
+        
         <TopMostPage />
         <ProjectTab />
 

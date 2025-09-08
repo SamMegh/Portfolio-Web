@@ -4,6 +4,7 @@ import HomeScreen from "./screens/HomeScreen";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Navbar from "./components/navbar";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
@@ -20,7 +21,8 @@ function App() {
   }, []);
 
   return (
-    <div id="smooth-wrapper">
+    <div id="smooth-wrapper" className="overflow-x-hidden">
+      <Navbar />
       <div id="smooth-content">
         <HomeScreen />
         {/* Add more sections here */}
