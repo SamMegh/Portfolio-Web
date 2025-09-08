@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-body { margin: 0; padding: 0; } 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* color-scheme: light dark;
@@ -40,6 +44,7 @@ body { margin: 0; padding: 0; }
   font-size: 24px;
   position: relative;
 }
+
 .homeScreentListItemAnchorTagMobile {
   color: #fff;
   text-decoration: none;
