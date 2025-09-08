@@ -66,7 +66,7 @@ export default function Navbar() {
   }, [menu]);
 
   return (
-  <div className="fixed right-2 top-[60%] -translate-y-1/2 overflow-hidden left-auto bottom-auto sm:bottom-2 sm:left-1/2 sm:-translate-x-1/2 sm:top-auto sm:translate-y-0 z-[10] w-fit">
+  <div className="fixed right-2 top-[60%] -translate-y-1/2 sm:overflow-hidden left-auto bottom-auto sm:bottom-2 sm:left-1/2 sm:-translate-x-1/2 sm:top-auto sm:translate-y-0 z-[10] w-fit">
       <header className=" flex justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[0.5px] bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] px-[2vw] py-0 ">
         {/* Logo */}
         <div className="logo w-[80px]">
@@ -113,16 +113,25 @@ export default function Navbar() {
         <div className="menu hidden sm:inline-block">
           <ul className="flex space-x-8">
             <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
+              <button
+                onClick={() => {
+                  gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: 0, offsetY: 0 },
+                    ease: "power2.inOut",
+                  });
+                }}
+                className="homeScreentListItemAnchorTag"
+              >
                 Home
-              </a>
+              </button>
             </li>
             <li className="homeScreenListItems">
               <button
                 onClick={() => {
                   gsap.to(window, {
                     duration: 1,
-                    scrollTo: { y: ".ProjectsSection", offsetY: 50 }, // adjust offset if navbar covers section
+                    scrollTo: { y: "#ProjectsSection", offsetY: 0 },
                     ease: "power2.inOut",
                   });
                 }}
@@ -132,14 +141,32 @@ export default function Navbar() {
               </button>
             </li>
             <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
+              <button
+                onClick={() => {
+                  gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: "#QualificationSection", offsetY: 50 },
+                    ease: "power2.inOut",
+                  });
+                }}
+                className="homeScreentListItemAnchorTag"
+              >
                 Qualification
-              </a>
+              </button>
             </li>
             <li className="homeScreenListItems">
-              <a className="homeScreentListItemAnchorTag" href="#">
+              <button
+                onClick={() => {
+                  gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: "#ContactSection", offsetY: 50 },
+                    ease: "power2.inOut",
+                  });
+                }}
+                className="homeScreentListItemAnchorTag"
+              >
                 Contact
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -152,24 +179,64 @@ export default function Navbar() {
           >
             <ul className="inline">
               <li className="homeScreenListItems navBarForMobile top-[-30px] right-[100px]">
-                <a className="homeScreentListItemAnchorTagMobile " href="#">
+                <button
+                  className="homeScreentListItemAnchorTagMobile"
+                  onClick={() => {
+                    gsap.to(window, {
+                      duration: 1,
+                      scrollTo: { y: 0, offsetY: 0 },
+                      ease: "power2.inOut",
+                    });
+                    setMenu(false);
+                  }}
+                >
                   Home
-                </a>
+                </button>
               </li>
               <li className="homeScreenListItems navBarForMobile top-[24px] right-[120px]">
-                <a className="homeScreentListItemAnchorTagMobile" href="#">
+                <button
+                  className="homeScreentListItemAnchorTagMobile"
+                  onClick={() => {
+                    gsap.to(window, {
+                      duration: 1,
+                      scrollTo: { y: "#ProjectsSection", offsetY: 50 },
+                      ease: "power2.inOut",
+                    });
+                    setMenu(false);
+                  }}
+                >
                   Projects
-                </a>
+                </button>
               </li>
               <li className="homeScreenListItems navBarForMobile top-[75px] right-[80px]">
-                <a className="homeScreentListItemAnchorTagMobile" href="#">
+                <button
+                  className="homeScreentListItemAnchorTagMobile"
+                  onClick={() => {
+                    gsap.to(window, {
+                      duration: 1,
+                      scrollTo: { y: "#ContactSection", offsetY: 50 },
+                      ease: "power2.inOut",
+                    });
+                    setMenu(false);
+                  }}
+                >
                   Contact
-                </a>
+                </button>
               </li>
               <li className="homeScreenListItems navBarForMobile top-[120px] right-[2px]">
-                <a className="homeScreentListItemAnchorTagMobile" href="#">
+                <button
+                  className="homeScreentListItemAnchorTagMobile"
+                  onClick={() => {
+                    gsap.to(window, {
+                      duration: 1,
+                      scrollTo: { y: "#QualificationSection", offsetY: 50 },
+                      ease: "power2.inOut",
+                    });
+                    setMenu(false);
+                  }}
+                >
                   Qualification
-                </a>
+                </button>
               </li>
             </ul>
           </div>
