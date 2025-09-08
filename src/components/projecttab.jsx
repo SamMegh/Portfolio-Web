@@ -1,11 +1,12 @@
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import projects from "../assets/projects.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectTab() {
+  const projectsRef = useRef([]);
   // All project details in a single variable
 
   useEffect(() => {
@@ -60,6 +61,32 @@ export default function ProjectTab() {
         scrub: true,
         pin: true,
         anticipatePin: 1,
+        onUpdate: () => {
+          // Find the project closest to the center of the viewport
+          const projects = projectsRef.current;
+          let minDiff = Infinity;
+          let activeIdx = -1;
+          projects.forEach((el, idx) => {
+            if (!el) return;
+            const rect = el.getBoundingClientRect();
+            const center = rect.left + rect.width / 2;
+            const diff = Math.abs(center - window.innerWidth / 2);
+            if (diff < minDiff) {
+              minDiff = diff;
+              activeIdx = idx;
+            }
+          });
+          projects.forEach((el, idx) => {
+            if (!el) return;
+            if (idx === activeIdx) {
+              el.classList.add("active-project");
+              el.classList.add("active-gradient");
+            } else {
+              el.classList.remove("active-project");
+              el.classList.remove("active-gradient");
+            }
+          });
+        }
       },
     });
   }, []);
@@ -81,12 +108,13 @@ export default function ProjectTab() {
           {projects.map((proj, i) => (
             <div
               key={i}
+              ref={el => projectsRef.current[i] = el}
               className="
     project opacity-0 flex flex-col sm:flex-row 
     items-center justify-center text-center sm:text-left
     p-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] 
     border border-white rounded-lg shadow-md
-    min-w-full sm:min-w-[800px] h-[80vh] sm:h-auto max-w-full
+    min-w-full sm:min-w-[800px] h-[80vh] sm:h-auto max-w-full transition-colors duration-300
   "
             >
               {/* Image section */}
