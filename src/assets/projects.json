@@ -1,0 +1,51 @@
+[
+  {
+    "name": "MedX Report",
+    "services": "React + Vite",
+    "description": "MedX-Report converts medical test data into professional lab reports—quickly, accurately, and paperless. Optimized for clinical workflows with clear reporting.",
+    "imgUrl": "https://github.com/SamMegh/MedX-Report/blob/main/screenshot/Screenshot%202025-09-05%20005045.png?raw=true",
+    "readMoreLink": "https://github.com/SamMegh/MedX-Report"
+  },
+  {
+    "name": "MY Chat Website",
+    "services": "React + Vite",
+    "description": "A web-based chat platform inspired by Instagram and WhatsApp. Features include chat, reply, delete, and copy options for seamless communication.",
+    "imgUrl": "https://via.placeholder.com/400x250.png?text=MY+Chat+Website",
+    "readMoreLink": "https://github.com/SamMegh/MyChat-Website"
+  },
+  {
+    "name": "MY Chat App",
+    "services": "Flutter (Dart)",
+    "description": "A cross-platform chat app built with Flutter for Android, iOS, and Chrome. Focused on simplicity and fast messaging.",
+    "imgUrl": "https://via.placeholder.com/400x250.png?text=MY+Chat+App",
+    "readMoreLink": "https://github.com/SamMegh/MyChat-App"
+  },
+  {
+    "name": "Knockout Football League",
+    "services": "React Native + Expo",
+    "description": "A football league app where users predict outcomes (win/loss/draw), compete with friends, and use lifelines. Built with React Native and Expo Router.",
+    "imgUrl": "https://via.placeholder.com/400x250.png?text=Knockout+Football",
+    "readMoreLink": "https://github.com/SamMegh/KNOCKOUT-FootBall-ReactNative"
+  },
+  {
+    "name": "Vaani",
+    "services": "JavaScript + Node.js",
+    "description": "A chatbot project designed for smarter conversations with extended capabilities compared to typical chatbots.",
+    "imgUrl": "https://via.placeholder.com/400x250.png?text=Vaani+Chatbot",
+    "readMoreLink": "https://github.com/SamMegh/Vaani"
+  },
+  {
+    "name": "Weather App",
+    "services": "C++",
+    "description": "A weather forecasting tool built with C++, focusing on accuracy and simplicity for quick weather checks.",
+    "imgUrl": "https://via.placeholder.com/400x250.png?text=Weather+App",
+    "readMoreLink": "https://github.com/SamMegh/Weather-App"
+  },
+  {
+    "name": "Portfolio Website",
+    "services": "React + Vite + Tailwind",
+    "description": "A modern personal portfolio website showcasing projects, skills, and achievements. Built with React, Vite, and Tailwind CSS.",
+    "imgUrl": "https://via.placeholder.com/400x250.png?text=Portfolio+Web",
+    "readMoreLink": "https://github.com/SamMegh/Portfolio-Web"
+  }
+]

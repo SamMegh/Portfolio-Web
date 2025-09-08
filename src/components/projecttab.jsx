@@ -1,52 +1,14 @@
 import gsap from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import projects from '../assets/projects.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectTab() {
   // All project details in a single variable
-  const projects = [
-    {
-      name: "MedX Report",
-      services: "React + Vite",
-      description:
-        "MedX-Report converts medical test data into comprehensive, professional lab reports—quickly, accurately, and without paper. It's designed to optimize clinical workflows and enhance reporting clarity",
-      imgUrl:
-        "https://github.com/SamMegh/MedX-Report/blob/main/screenshot/Screenshot%202025-09-05%20005045.png?raw=true",
-      readMoreLink: "https://github.com/SamMegh/MedX-Report/",
-    },
-    {
-      name: "Project 2",
-      services: "React + Vite",
-      color: "bg-red-300",
-    },
-    {
-      name: "Project 3",
-      services: "React + Vite",
-      color: "bg-red-300",
-    },
-    {
-      name: "Project 4",
-      services: "React + Vite",
-      color: "bg-red-300",
-    },
-    {
-      name: "Project 5",
-      services: "React + Vite",
-      color: "bg-red-300",
-    },
-    {
-      name: "Project 6",
-      services: "React + Vite",
-      color: "bg-red-300",
-    },
-    {
-      name: "Project 7",
-      services: "React + Vite",
-      color: "bg-red-300",
-    },
-  ];
+
+
 
   useEffect(() => {
     ScrollTrigger.getAll().forEach((st) => st.kill());
@@ -116,7 +78,7 @@ export default function ProjectTab() {
 
         <div
           id="AllProjects"
-          className="flex gap-1 sm:gap-10 h-[80vh] items-center p-2 sm:p-5"
+          className="flex gap-1 sm:gap-10 h-[80vh] items-center p-2 mr-1 sm:p-5"
         >
           {projects.map((proj, i) => (
             <div
