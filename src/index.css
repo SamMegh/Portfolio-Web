@@ -90,3 +90,44 @@ body {
   padding: 2px;
 
 }
+
+
+
+
+.neon-glow {
+  text-shadow: 
+    0 0 5px var(--very-white),
+    0 0 10px var(--very-light),
+    0 0 20px var(--little-blue),
+    0 0 40px var(--very-light),
+    0 0 80px var(--very-white);
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 
+      0 0 5px var(--very-white),
+      0 0 10px var(--very-light),
+      0 0 20px var(--little-blue),
+      0 0 40px var(--very-light);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 
+      0 0 3px var(--very-light),
+      0 0 7px var(--little-blue),
+      0 0 15px var(--very-light),
+      0 0 30px var(--little-blue);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 10px var(--very-white),
+      0 0 20px var(--very-light),
+      0 0 40px var(--little-blue),
+      0 0 80px var(--very-light),
+      0 0 120px var(--very-white);
+  }
+}

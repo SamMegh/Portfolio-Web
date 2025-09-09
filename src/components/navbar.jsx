@@ -16,7 +16,7 @@ export default function Navbar() {
         "header",
         { y: 500, opacity: 0 },
         {
-          delay:5,
+          delay:1.3,
           duration: 0.5,
           y: 0,
           opacity: 1,
@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
   <div className="fixed right-2 top-[60%] -translate-y-1/2 sm:overflow-hidden left-auto bottom-auto sm:bottom-2 sm:left-1/2 sm:-translate-x-1/2 sm:top-auto sm:translate-y-0 z-[10] w-fit">
-      <header className=" flex justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[1px] border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.1)] backdrop-blur-[8px] px-[3.5vw] py-0 ">
+      <header className=" flex opacity-0 justify-center sm:gap-10 flex-col sm:flex-row rounded-3xl items-center border-[1px] border-[rgba(255,255,255,0.3)] bg-[rgba(255,255,255,0.1)] backdrop-blur-[8px] px-[3.5vw] py-0 ">
         {/* Logo */}
         <div className="logo w-[40px]">
           <img
