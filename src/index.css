@@ -1,3 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'handWrittenFont';
+  src: url('./assets/Fonts/Handlee/Handlee-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* Highlight active project card */
 .active-project {
   background-color: rgba(255, 255, 255, 0.2) !important;
@@ -6,7 +16,6 @@
   color: #222;
   transition: background-color 0.8s;
 }
-@import "tailwindcss";
 
 body {
   margin: 0;
@@ -93,9 +102,9 @@ body {
 
 
 
-/* top most page ui css */
+/* top most page glow ui css */
 .neon-glow {
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--very-white),
     0 0 10px var(--very-light),
     0 0 20px var(--little-blue),
@@ -107,27 +116,37 @@ body {
 @keyframes flicker {
   0% {
     opacity: 1;
-    text-shadow: 
+    text-shadow:
       0 0 5px var(--very-white),
       0 0 10px var(--very-light),
       0 0 20px var(--little-blue),
       0 0 40px var(--very-light);
   }
+
   50% {
     opacity: 0.8;
-    text-shadow: 
+    text-shadow:
       0 0 3px var(--very-light),
       0 0 7px var(--little-blue),
       0 0 15px var(--very-light),
       0 0 30px var(--little-blue);
   }
+
   100% {
     opacity: 1;
-    text-shadow: 
+    text-shadow:
       0 0 10px var(--very-white),
       0 0 20px var(--very-light),
       0 0 40px var(--little-blue),
       0 0 80px var(--very-light),
       0 0 120px var(--very-white);
   }
+}
+
+
+
+/* topmostpage  names ui */
+.myDiscription {
+  font-family: 'handWrittenFont', sans-serif;
+  word-spacing: 3px;
 }
