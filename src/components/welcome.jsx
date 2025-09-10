@@ -21,8 +21,9 @@ export default function WelcomeComponent() {
     // Step 1: start at center
     gsap.set(flyingEls, {
       opacity: 0,
-      x: gsap.utils.random(-(width-100), (width)),
+      x: gsap.utils.random(-(width - 100), width),
       y: gsap.utils.random(-200, 200),
+      duration: 0.5,
       scale: 0.3,
     });
 
@@ -33,7 +34,7 @@ export default function WelcomeComponent() {
       rotation: () => gsap.utils.random(-360, 360),
       x: () => gsap.utils.random(-width, width),
       y: () => gsap.utils.random(-350, 350),
-      duration: 1.1,
+      duration: 0.6,
       ease: "power3.out",
       stagger: { each: 0.01, from: "center" },
       onComplete: () => {
@@ -65,12 +66,12 @@ export default function WelcomeComponent() {
               y: ty,
               rotation: 0,
               scale: 1.3,
-              duration: 1.3,
+              duration: 0.8,
               ease: "elastic.out(1, 0.5)",
               onComplete: () => {
                 // Neon glow effect
+                el.classList.add("neon-glow");
                 gsap.to(el, {
-                  textShadow: "0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px #0ff",
                   duration: 1.2,
                   repeat: -1,
                   yoyo: true,
@@ -85,21 +86,21 @@ export default function WelcomeComponent() {
               y: window.innerHeight + 200,
               opacity: 0,
               rotation: gsap.utils.random(-180, 180),
-              duration: gsap.utils.random(0.6, 0.8),
+              duration: gsap.utils.random(0.4, 0.6),
               ease: "power1.in",
-              delay: gsap.utils.random(0.2, 1),
+              delay: gsap.utils.random(0.2, 0.6),
             });
           }
         });
       },
     });
-    gsap.to(".mainBlock",{
-          y:-11,
-          duration:0.2
-        })
+    gsap.to(".mainBlock", {
+      y: -11,
+      duration: 0.2,
+    });
   }, [width]);
 
-  const displayText = "WELCOME TO OUR CREATION";
+  const displayText = "WELCOME TO SAM'S CREATION";
 
   return (
     <div className="relative mainBlock h-screen w-full flex items-center justify-center overflow-hidden">
@@ -133,7 +134,7 @@ export default function WelcomeComponent() {
             ref={(el) => (flyingLettersRef.current[i] = el)}
             className="absolute text-white text-[5vw] font-bold"
             style={{
-              textShadow: "0 0 10px #0ff, 0 0 20px #0ff",
+              textShadow: "0 0 10px #BDC3C7, 0 0 20px #BDC3C7",
             }}
           >
             {letter}
