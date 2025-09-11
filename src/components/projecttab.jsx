@@ -81,12 +81,13 @@ export default function ProjectTab() {
             if (idx === activeIdx) {
               el.classList.add("active-project");
               el.classList.add("active-gradient");
-            } else {
+            }
+            else {
               el.classList.remove("active-project");
               el.classList.remove("active-gradient");
             }
           });
-        }
+        },
       },
     });
   }, []);
@@ -108,17 +109,11 @@ export default function ProjectTab() {
           {projects.map((proj, i) => (
             <div
               key={i}
-              ref={el => projectsRef.current[i] = el}
-              className="
-    project opacity-0 flex flex-col sm:flex-row 
-    items-center justify-center text-center sm:text-left
-    p-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] 
-    border border-white rounded-lg shadow-md
-    min-w-full sm:min-w-[800px] h-[80vh] sm:h-auto max-w-full transition-colors duration-300
-  "
+              ref={(el) => (projectsRef.current[i] = el)}
+              className="project opacity-0 flex flex-col sm:flex-row items-center justify-center text-center sm:text-leftp-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] border border-white rounded-lg shadow-mdmin-w-full sm:min-w-[800px] h-[80vh] sm:h-auto min-w-full transition-colors duration-300"
             >
               {/* Image section */}
-              <div className="w-full sm:w-[500px]">
+              <div className="w-full sm:w-[500px] p-2">
                 <div className="w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md">
                   {proj.imgUrl == "none" ? (
                     <div className="flex flex-col h-full bg-[rgba(0,0,0,0.2)] backdrop-blur-[20px] items-center justify-center px-6  text-center">
@@ -142,7 +137,7 @@ export default function ProjectTab() {
 
               {/* Text section */}
               <div className="text text-white w-full sm:max-w-[400px] flex flex-col items-center sm:items-start">
-                <h3 className="title text-[45px] font-semibold">{proj.name}</h3>
+                <h3 className="title text-[45px] font-semibold font-['handWrittenFont']">{proj.name}</h3>
                 <h5 className="text-sm mb-2">
                   Services: <span className="font-medium">{proj.services}</span>
                 </h5>

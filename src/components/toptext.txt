@@ -1,0 +1,134 @@
+import gsap from "gsap";
+import React, { useLayoutEffect, useRef } from "react";
+
+export default function HackerBlastWithSparks() {
+  const lettersRef = useRef([]);
+  const containerRef = useRef(null);
+
+  const firstName = "WELCOME TO".split("");
+  const lastName = "SAM'S CREATION".split("");
+
+  // Function to create sparks for each letter
+  const createSparks = (letterEl, color) => {
+    const sparkCount = 6 + Math.floor(Math.random() * 5);
+    const sparks = [];
+    for (let i = 0; i < sparkCount; i++) {
+      const spark = document.createElement("span");
+      spark.className = "absolute w-[4px] h-[4px] rounded-full";
+      spark.style.backgroundColor = color;
+      spark.style.left = "10%";
+      spark.style.top = "10%";
+      spark.style.transform = "translate(-50%, -50%)";
+      spark.style.opacity = 0.8;
+      letterEl.appendChild(spark);
+      sparks.push(spark);
+
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 50 + Math.random() * 50;
+
+      gsap.to(spark, {
+        x: Math.cos(angle) * distance,
+        y: Math.sin(angle) * distance,
+        opacity: 0,
+        scale: 0.3,
+        duration: 0.8 + Math.random() * 0.5,
+        ease: "power2.out",
+        onComplete: () => spark.remove(),
+      });
+    }
+  };
+
+  useLayoutEffect(() => {
+    const allLetters = lettersRef.current;
+
+    allLetters.forEach((el, i) => {
+
+      // Random circular explosion
+      const angle = Math.random() * Math.PI * 2;
+      const distance = 250 + Math.random() * 200;
+      const x = Math.cos(angle) * distance;
+      const y = Math.sin(angle) * distance;
+
+      // Trigger sparks when exploding
+      setTimeout(() => createSparks(el), i * 50);
+
+      gsap.fromTo(
+        el,
+        {
+          x: 0,
+          y: 0,
+          scale: 0.8 + Math.random() * 1.2,
+          opacity: 0,
+          rotation: Math.random() * 1080 - 540,
+          color: "#fff",
+        },
+        {
+          x: x,
+          y: y,
+          scale: 1,
+          opacity: 1,
+          rotation: 0,
+          duration: 1.5 + Math.random() * 0.5,
+          ease: "back.out(2)",
+          delay: i * 0.05,
+        }
+      );
+
+      // Converge back with small bounce
+      gsap.to(el, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        rotation: Math.random() * 10 - 5,
+        duration: 1 + Math.random() * 0.5,
+        ease: "elastic.out(1, 0.5)",
+        delay: 1.5 + i * 0.08,
+      });
+    });
+
+    // Floating container effect
+    gsap.to(containerRef.current, {
+      y: -15,
+      duration: 3,
+      ease: "sine.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: 3,
+    });
+  });
+
+  return (
+    <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute inset-0opacity-40 z-0 "></div>
+
+      {/* Letters Container */}
+      <div ref={containerRef} className="relative z-10 text-center flex flex-col items-center justify-center">
+        <h1 className="font-bold tracking-widest flex flex-wrap justify-center text-[10vw] sm:text-[8vw] ">
+          {firstName.map((letter, i) => (
+            <span
+              key={i}
+              ref={(el) => (lettersRef.current[i] = el)}
+              className="relative inline-block m-[2px] text-white"
+              style={{ textShadow: "0 0 5px #fff, 0 0 9px #fff" }}
+            >
+              {letter}
+            </span>
+          ))}
+        </h1>
+        <h1 className="font-extrabold tracking-widest flex flex-wrap justify-center">
+          {lastName.map((letter, i) => (
+            <span
+              key={i + firstName.length}
+              ref={(el) => (lettersRef.current[i + firstName.length] = el)}
+              className="relative inline-block m-[2px] text-white"
+              style={{ textShadow: "0 0 5px #fff, 0 0 5px #fff" }}
+            >
+              {letter}
+            </span>
+          ))}
+        </h1>
+      </div>
+    </div>
+  );
+}

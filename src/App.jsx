@@ -23,7 +23,7 @@ function App() {
         ease: "power2.out",
         onComplete: () => setShowWelcome(false), // remove after animation
       });
-    }, 5000);
+    }, 1);
 
     return () => clearTimeout(timer);
   }, []);

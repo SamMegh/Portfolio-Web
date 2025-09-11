@@ -29,6 +29,7 @@ export default function NeonText() {
           stagger: 0.1,
         }
       );
+      
     });
 
     return () => ctx.revert();
@@ -52,14 +53,14 @@ export default function NeonText() {
                 <span
                   key={i}
                   ref={(el) => (lettersRef.current[i] = el)}
-                  className="neon-glow"
+                  className="neon-glow font-['headingFont']"
                 >
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
             </h1>
           </div>
-          <div className="myDiscription text-2xl">
+          <div className="myDiscription font-['handWrittenFont'] text-2xl">
             <p>
               Full-stack engineering student with expertise in React, Node.js, and cross-platform mobile development using Flutter and React Native. Skilled in creating dynamic user interfaces with GSAP animations and passionate about cybersecurity and bug hunting.
 

@@ -6,6 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'headingFont';
+  src: url('./assets/Fonts/Quintessential/Quintessential-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* Highlight active project card */
@@ -146,7 +152,3 @@ body {
 
 
 /* topmostpage  names ui */
-.myDiscription {
-  font-family: 'handWrittenFont', sans-serif;
-  word-spacing: 3px;
-}

@@ -9,7 +9,7 @@ export default function WelcomeComponent() {
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?/".split(
       ""
     );
-  const repeatedLetters = Array(5).fill(allLetters).flat();
+  const repeatedLetters = Array(6).fill(allLetters).flat();
 
   useLayoutEffect(() => {
     const flyingEls = flyingLettersRef.current;
