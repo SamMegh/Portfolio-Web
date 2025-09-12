@@ -13,7 +13,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 ## env variables are 
-- VITE_PROJECTS
-- VITE_I_AM_SAM_NAME
-- VITE_MY_DISCRIPTION
-- VITE_WELCOME_PAGE_SAM_CREATION
+- VITE_WELCOME_PAGE_SAM_CREATION --- "welcome to sam's creation"
+- VITE_PROJECTS --- give your project in this formate [{name:"name","services":"React","description":"this is test project",imgUrl:"link",readMoreLink:"readmorelink":"link"},...]
+- VITE_I_AM_SAM_NAME  --- "name you want to disply on the screen"
+- VITE_MY_DISCRIPTION --- "discription about you"
