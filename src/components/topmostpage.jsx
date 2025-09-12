@@ -55,6 +55,11 @@ export default function NeonText() {
           stagger: 0.05,
         }
       );
+      gsap.from(".myImg",{
+        x:500,
+        duration:1,
+        opacity:0
+      })
     });
 
     return () => ctx1.revert();
@@ -77,7 +82,8 @@ export default function NeonText() {
 
         {/* Text container */}
         <div className="nameContanter flex-1 flex items-center gap-6 flex-col">
-          <div className="name">
+          {/* name of me */}
+          <div id="name" className="name">
             <h1 className="opacityControl text-4xl sm:text-6xl opacity-0 font-bold text-[var(--very-white)] flex gap-1 flex-wrap">
               {text.split("").map((char, i) => (
                 <span
@@ -90,6 +96,7 @@ export default function NeonText() {
               ))}
             </h1>
           </div>
+          {/* discription */}
           <div className="myDiscription font-['handWrittenFont'] text-2xl">
             {discription.split(" ").map((word,i)=>(
               <span key={i}
