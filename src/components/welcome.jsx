@@ -6,7 +6,7 @@ export default function WelcomeComponent() {
   const targetLettersRef = useRef([]);
   const [width, setWidth] = useState(window.innerWidth);
   const allLetters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?/".split(
+    `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:',.<>?/${import.meta.env.VITE_WELCOME_PAGE_SAM_CREATION}`.split(
       ""
     );
   const repeatedLetters = Array(6).fill(allLetters).flat();
@@ -100,7 +100,7 @@ export default function WelcomeComponent() {
     });
   }, [width]);
 
-  const displayText = "WELCOME TO SAM'S CREATION";
+  const displayText = import.meta.env.VITE_WELCOME_PAGE_SAM_CREATION;
 
   return (
     <div className="relative mainBlock h-screen w-full flex items-center justify-center overflow-hidden">

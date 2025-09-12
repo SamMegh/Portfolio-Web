@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import projects from "../assets/projects.json";
+const projects = JSON.parse(import.meta.env.VITE_PROJECTS);
 
 gsap.registerPlugin(ScrollTrigger);
 

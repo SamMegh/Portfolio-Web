@@ -3,6 +3,7 @@ import gsap from "gsap";
 import profilephoto from "../assets/Profile_Photo.png";
 export default function NeonText() {
   const lettersRef = useRef([]);
+  const discriptionRef = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -29,20 +30,49 @@ export default function NeonText() {
           stagger: 0.1,
         }
       );
-      
     });
 
     return () => ctx.revert();
   }, []);
 
-  const text = "I'm SAM";
+  useEffect(() => {
+    const ctx1 = gsap.context(() => {
+      gsap.fromTo(
+        discriptionRef.current,
+        {
+          opacity: 0,
+          x: () => gsap.utils.random(-200, 200),
+          y: () => gsap.utils.random(-200, 200),
+          scale: 0,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: "back.out(1.7)",
+          stagger: 0.05,
+        }
+      );
+    });
+
+    return () => ctx1.revert();
+  }, []);
+
+  const text = import.meta.env.VITE_I_AM_SAM_NAME;
+  const discription=import.meta.env.VITE_MY_DISCRIPTION;
 
   return (
     <div className="flex items-center h-screen ">
       <div className="page1content sm:p-10 h-screen flex flex-col sm:flex-row-reverse justify-center sm:justify-evenly gap-5 items-center">
         {/* Image container */}
         <div className="myImg flex-1 flex justify-center items-center overflow-hidden">
-          <img className="w-[50vw] sm:w-[30vw] rounded-full bg-[rgba(0,0,0,0.1)] border border-white/10 backdrop-blur-[4px]" src={profilephoto} alt="" />
+          <img
+            className="w-[50vw] sm:w-[30vw] rounded-full bg-[rgba(0,0,0,0.1)] border border-white/10 backdrop-blur-[4px]"
+            src={profilephoto}
+            alt=""
+          />
         </div>
 
         {/* Text container */}
@@ -61,11 +91,13 @@ export default function NeonText() {
             </h1>
           </div>
           <div className="myDiscription font-['handWrittenFont'] text-2xl">
-            <p>
-              Full-stack engineering student with expertise in React, Node.js, and cross-platform mobile development using Flutter and React Native. Skilled in creating dynamic user interfaces with GSAP animations and passionate about cybersecurity and bug hunting.
-
-
-            </p>
+            {discription.split(" ").map((word,i)=>(
+              <span key={i}
+              ref={(el) => (discriptionRef.current[i] = el)}
+              >
+                {`${word} `}
+              </span>
+            ))}
           </div>
         </div>
       </div>
