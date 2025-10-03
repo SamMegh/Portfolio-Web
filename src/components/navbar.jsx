@@ -121,20 +121,6 @@ export default function Navbar() {
                 onClick={() => {
                   gsap.to(window, {
                     duration: 1,
-                    scrollTo: { y: "#ProjectsSection", offsetY: 0 },
-                    ease: "power2.inOut",
-                  });
-                }}
-                className="homeScreentListItemAnchorTag"
-              >
-                Projects
-              </button>
-            </li>
-            <li className="homeScreenListItems">
-              <button
-                onClick={() => {
-                  gsap.to(window, {
-                    duration: 1,
                     scrollTo: { y: "#QualificationSection", offsetY: 50 },
                     ease: "power2.inOut",
                   });
@@ -142,6 +128,20 @@ export default function Navbar() {
                 className="homeScreentListItemAnchorTag"
               >
                 Qualification
+              </button>
+            </li> 
+            <li className="homeScreenListItems">
+              <button
+                onClick={() => {
+                  gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: "#ProjectsSection", offsetY: 0 },
+                    ease: "power2.inOut",
+                  });
+                }}
+                className="homeScreentListItemAnchorTag"
+              >
+                Projects
               </button>
             </li>
             <li className="homeScreenListItems">

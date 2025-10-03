@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import TopMostPage from "../components/topmostpage";
 import ProjectTab from "../components/projecttab";
-import Skills from "../components/skills";
+import Skills from "../components/Qualifications";
 
 function HomeScreen() {
   useEffect(() => {

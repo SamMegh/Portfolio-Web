@@ -193,7 +193,7 @@ export default function Skills() {
   // No GSAP animations to avoid flash/disappear issues
 
   return (
-    <div ref={skillsRef} className="skills-section w-full p-6 sm:p-12 text-white relative min-h-screen flex items-center">
+    <div id="QualificationSection" ref={skillsRef} className="skills-section w-full p-6 sm:p-12 text-white relative min-h-screen flex items-center">
       <div className="w-full">
         {/* Title section - with CSS animations */}
         <div className="text-center mb-16 animate-fade-in">
