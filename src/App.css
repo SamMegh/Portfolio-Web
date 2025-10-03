@@ -5,6 +5,38 @@
   scroll-behavior: smooth;
 }
 
+/* Skills section CSS animations - reliable and no flash */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slide-up 0.6s ease-out forwards;
+}
+
 /* GSAP will handle most animations, keeping minimal CSS */
 .project img {
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -13,4 +45,23 @@
 /* Enhanced transitions for better performance */
 .project {
   will-change: transform, opacity, filter;
+}
+
+/* Text truncation utilities for mobile */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .sm\:line-clamp-none {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: visible;
+  }
 }

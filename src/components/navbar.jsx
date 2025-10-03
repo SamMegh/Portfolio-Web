@@ -16,7 +16,7 @@ export default function Navbar() {
         "header",
         { y: 500, opacity: 0 },
         {
-          delay:1.3,
+          delay: 1.3,
           duration: 0.5,
           y: 0,
           opacity: 1,
