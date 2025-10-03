@@ -21,20 +21,6 @@
     "readMoreLink": "https://github.com/SamMegh/MyChat-Website"
   },
   {
-    "name": "Weather App",
-    "services": "Flutter (Dart)",
-    "description": "A weather forecasting tool built with Flutter, focusing on accuracy and simplicity for quick weather checks.",
-    "imgUrl": "https://github.com/SamMegh/Weather-App/blob/main/ScreenShot/screenshot0.jpg?raw=true",
-    "readMoreLink": "https://github.com/SamMegh/Weather-App"
-  },
-  {
-    "name": "Portfolio Website",
-    "services": "React + Vite + Tailwind",
-    "description": "A modern personal portfolio website showcasing projects, skills, and achievements. Built with React, Vite, GSAP, and Tailwind CSS.",
-    "imgUrl": "https://github.com/SamMegh/Portfolio-Web/blob/main/ScreenShot/screenshot0.png?raw=true",
-    "readMoreLink": "https://github.com/SamMegh/Portfolio-Web"
-  },
-  {
     "name": "MY Chat App",
     "services": "Flutter (Dart)",
     "description": "A cross-platform chat app built with Flutter for Android, iOS, and Chrome. Focused on simplicity and fast messaging.",

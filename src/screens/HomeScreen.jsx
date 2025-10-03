@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import TopMostPage from "../components/topmostpage";
 import ProjectTab from "../components/projecttab";
+import Skills from "../components/skills";
 
 function HomeScreen() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function HomeScreen() {
       <div className="wrapper overflow-hidden">
         
         <TopMostPage />
+        <Skills/>
         <ProjectTab />
 
         <div>

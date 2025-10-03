@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Custom animations for smooth scrolling */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* GSAP will handle most animations, keeping minimal CSS */
+.project img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Enhanced transitions for better performance */
+.project {
+  will-change: transform, opacity, filter;
+}

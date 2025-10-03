@@ -9,7 +9,7 @@ export default function NeonText() {
     const ctx = gsap.context(() => {
       gsap.to(".opacityControl", {
         opacity: 1,
-        display: 0.1,
+        delay: 0.1,
         duration: 0.2,
       });
       gsap.fromTo(
@@ -84,7 +84,7 @@ export default function NeonText() {
         <div className="nameContanter flex-1 flex items-center gap-6 flex-col">
           {/* name of me */}
           <div id="name" className="name">
-            <h1 className="opacityControl text-4xl sm:text-6xl opacity-0 font-bold text-[var(--very-white)] flex gap-1 flex-wrap">
+            <h1 className="opacityControl select-none text-4xl sm:text-6xl opacity-0 font-bold text-[var(--very-white)] flex gap-1 flex-wrap">
               {text.split("").map((char, i) => (
                 <span
                   key={i}
