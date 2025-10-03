@@ -155,6 +155,7 @@ function LogoWithFallback({ name, urls, index }) {
 
   return (
     <div 
+    id="QualificationSection"
       ref={containerRef}
       className="relative w-16 h-16 mb-3 cursor-pointer group"
     >
@@ -187,8 +188,22 @@ function LogoWithFallback({ name, urls, index }) {
 
 export default function Skills() {
   const skillsRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   
   let SkillData = techLogos;
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   // No GSAP animations to avoid flash/disappear issues
 
@@ -206,24 +221,15 @@ export default function Skills() {
 
         {/* Skills grid - with CSS animations */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 place-items-center max-w-7xl mx-auto px-4">
-          {Object.entries(SkillData).map(([name, urls], index) => (
+          {Object.entries(SkillData)
+            .slice(0, isMobile ? 6 : Object.entries(SkillData).length)
+            .map(([name, urls], index) => (
             <div 
               key={name} 
               className="group flex flex-col items-center p-4 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl border border-white/20 min-h-[140px] w-[120px] hover:scale-105 hover:-translate-y-2 hover:bg-gradient-to-br hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:border-white/40 hover:shadow-lg hover:shadow-purple-500/20 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 mb-3 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-all duration-300 relative overflow-hidden">
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-                <img
-                  src={urls[0]}
-                  alt={name}
-                  className="w-12 h-12 object-contain relative z-10 group-hover:scale-110 transition-transform duration-300"
-                  onError={(e) => {
-                    e.target.src = urls[1] || urls[2] || "";
-                  }}
-                />
-              </div>
+              <LogoWithFallback name={name} urls={urls} index={index} />
               <span className="text-sm text-center text-gray-200 group-hover:text-white transition-colors duration-300 font-medium">{name}</span>
               
               {/* Subtle sparkle effects */}
