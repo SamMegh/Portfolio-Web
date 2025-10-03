@@ -56,6 +56,14 @@
   overflow: hidden;
 }
 
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media (min-width: 640px) {
   .sm\:line-clamp-none {
     display: block;
