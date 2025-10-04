@@ -121,7 +121,7 @@ export default function Navbar() {
                 onClick={() => {
                   gsap.to(window, {
                     duration: 1,
-                    scrollTo: { y: "#QualificationSection", offsetY: 50 },
+                    scrollTo: { y: "#QualificationSection", offsetY: 0 },
                     ease: "power2.inOut",
                   });
                 }}
@@ -149,7 +149,7 @@ export default function Navbar() {
                 onClick={() => {
                   gsap.to(window, {
                     duration: 1,
-                    scrollTo: { y: "#ContactSection", offsetY: 50 },
+                    scrollTo: { y: "#ContactSection", offsetY: 0 },
                     ease: "power2.inOut",
                   });
                 }}
