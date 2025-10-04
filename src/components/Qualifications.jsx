@@ -4,118 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const techLogos = {
-  "C": [
-    "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
-    "https://img.icons8.com/color/480/c-programming.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-  ],
-  "C++": [
-    "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
-    "https://img.icons8.com/color/480/c-plus-plus-logo.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-  ],
-  "JavaScript": [
-    "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    "https://img.icons8.com/color/480/javascript--v1.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-  ],
-  "HTML": [
-    "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-    "https://img.icons8.com/color/480/html-5--v1.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-  ],
-  "CSS": [
-    "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-    "https://img.icons8.com/color/480/css3.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-  ],
-  "Node.js": [
-    "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg",
-    "https://img.icons8.com/color/480/nodejs.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-  ],
-  "Express": [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
-    "https://img.icons8.com/ios/500/express-js.png"
-  ],
-  "MongoDB": [
-    "https://upload.wikimedia.org/wikipedia/commons/4/45/MongoDB_Logo.svg",
-    "https://img.icons8.com/color/480/mongodb.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-  ],
-  "React": [
-    "https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg",
-    "https://img.icons8.com/color/480/react-native.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-  ],
-  "React Native": [
-    "https://reactnative.dev/img/header_logo.svg",
-    "https://img.icons8.com/color/480/react-native.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-  ],
-  "Tailwind CSS": [
-    "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-    "https://img.icons8.com/color/480/tailwindcss.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-  ],
-  "DaisyUI": [
-    "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
-    "https://avatars.githubusercontent.com/u/71592462?s=200&v=4",
-    "https://i.ibb.co/5sYgN1X/daisyui-alt.png"
-  ],
-  "Flutter": [
-    "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png",
-    "https://img.icons8.com/color/480/flutter.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-  ],
-  "Python": [
-    "https://www.python.org/static/community_logos/python-logo.png",
-    "https://img.icons8.com/color/480/python.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-  ],
-  "WebRTC": [
-    "https://upload.wikimedia.org/wikipedia/commons/0/0c/WebRTC_Logo.svg",
-    "https://webrtc.github.io/webrtc-org/assets/images/webrtc-logo-vert-retro-255x305.png",
-    "https://i.ibb.co/2dBwwsQ/webrtc-alt.png"
-  ],
-  "Stable Diffusion": [
-    "https://stability.ai/wp-content/uploads/2023/07/stability-logo.svg",
-    "https://avatars.githubusercontent.com/u/108345191?s=200&v=4",
-    "https://i.ibb.co/TmWsGcs/stable-diffusion-alt.png"
-  ],
-  "ComfyUI": [
-    "https://github.com/comfyanonymous/ComfyUI/raw/master/comfyui_logo.png",
-    "https://avatars.githubusercontent.com/u/125986776?s=200&v=4",
-    "https://i.ibb.co/f8zM8zF/comfyui-alt.png"
-  ],
-  "CRON": [
-    "https://upload.wikimedia.org/wikipedia/commons/b/bb/Cron-linux.svg",
-    "https://img.icons8.com/ios/500/clock.png",
-    "https://i.ibb.co/k59CsLj/cron-alt.png"
-  ],
-  "Firebase": [
-    "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
-    "https://img.icons8.com/color/480/firebase.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-  ],
-  "Google Cloud (GCP)": [
-    "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg",
-    "https://img.icons8.com/color/480/google-cloud.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-  ],
-  "GitHub": [
-    "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    "https://img.icons8.com/material-outlined/480/github.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-  ],
-  "Socket.io": [
-    "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg",
-    "https://socket.io/images/logo-dark.svg",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
-  ]
-};
+const techLogos = JSON.parse(import.meta.env.VITE_TECH_SKILLS); 
 
 // Simple loading spinner component
 function LoadingSpinner() {
@@ -192,7 +81,14 @@ export default function Skills() {
   const [showAllSkills, setShowAllSkills] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   
+  // Get skills from environment variable with fallback
   let SkillData = techLogos;
+  
+  // Error handling for missing or invalid environment variable
+  if (!SkillData || typeof SkillData !== 'object') {
+    console.error('VITE_TECH_SKILLS environment variable is not properly configured');
+    SkillData = {}; // Fallback to empty object
+  }
 
   useEffect(() => {
     const checkMobile = () => {
