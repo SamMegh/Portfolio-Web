@@ -22,9 +22,7 @@ function HomeScreen() {
         <Skills />
         <ProjectTab className="h-screen" />
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure numquam non quos culpa! Esse, deserunt. Veniam architecto voluptate exercitationem doloribus maiores repellat, expedita modi reiciendis nobis laboriosam, atque accusantium ipsum.
-        <Contact />
-
+          <Contact />
         </div>
       </div>
     </div>

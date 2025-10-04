@@ -36,9 +36,9 @@ const techLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
   ],
   "Express": [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
-    "https://img.icons8.com/ios/500/express-js.png",
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+    "https://img.icons8.com/ios/500/express-js.png"
   ],
   "MongoDB": [
     "https://upload.wikimedia.org/wikipedia/commons/4/45/MongoDB_Logo.svg",

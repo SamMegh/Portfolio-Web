@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
 
-  // Handle form input changes
+  // Handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -17,20 +17,42 @@ function Contact() {
     });
   };
 
-  // Handle form submission
+  // Handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+    // Create FormData object for API request
+    const formDataToSend = new FormData();
+    formDataToSend.append(
+      "access_key",
+      import.meta.env.VITE_WEB3_FORMS_API_KEY
+    );
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("message", formData.message);
 
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(""), 3000);
-    }, 2000);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+      console.log("API response:", data);
+
+      if (data.success) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -177,7 +199,6 @@ function Contact() {
                 >
                   <svg
                     aria-label="Instagram"
-                    class="x1lliihq x1n2onr6 x5n08af"
                     fill="currentColor"
                     height="24"
                     role="img"
