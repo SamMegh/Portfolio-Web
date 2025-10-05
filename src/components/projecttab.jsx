@@ -16,7 +16,7 @@ export default function ProjectTab() {
     
     const isMobile = window.innerWidth < 768;
     
-    // Horizontal scroll for projects - Desktop only
+    // Desktop only - GSAP animations
     if (!isMobile) {
       const container = document.querySelector("#AllProjects");
 
@@ -97,47 +97,17 @@ export default function ProjectTab() {
         },
       });
     } else {
-      // Mobile: Simple animations without horizontal scroll
-      gsap.fromTo(
-        ".Project-name",
-        { x: -500 },
-        {
-          duration: 2.5,
-          ease: "back.out(2)",
-          x: 0,
-          scrollTrigger: {
-            trigger: "#ProjectsSection",
-            scrub: 2,
-            end: "top 40%",
-          },
-        }
-      );
-      gsap.fromTo(
-        "#AllProjects .project",
-        { y: 1500, opacity: 0 },
-        {
-          duration: 3.5,
-          ease: "back.out(2)",
-          y: 0,
-          opacity: 1,
-          stagger: 0.3,
-          scrollTrigger: {
-            trigger: "#ProjectsSection",
-            scrub: 2,
-            start: "top 60%",
-            end: "top top",
-          },
-        }
-      );
-      
-      // Simple pin without horizontal scroll for mobile
-      ScrollTrigger.create({
-        trigger: "#ProjectsSection",
-        start: "top top",
-        end: () => "+=" + window.innerHeight * 0.5,
-        pin: true,
-        anticipatePin: 1,
+      // Mobile: No GSAP animations - set initial visibility
+      const projectElements = document.querySelectorAll("#AllProjects .project");
+      projectElements.forEach((el) => {
+        el.style.opacity = "1";
+        el.style.transform = "none";
       });
+      
+      const projectName = document.querySelector(".Project-name");
+      if (projectName) {
+        projectName.style.transform = "translateX(0)";
+      }
     }
   }, []);
 
@@ -154,15 +124,12 @@ export default function ProjectTab() {
     
     setCurrentProject(newIndex);
     
-    // Animate the container to show the new project on mobile
+    // Simple CSS transition for mobile navigation without GSAP
     const container = containerRef.current;
     const translateX = -newIndex * window.innerWidth;
     
-    gsap.to(container, {
-      x: translateX,
-      duration: 0.6,
-      ease: "power2.inOut"
-    });
+    container.style.transition = 'transform 0.6s ease-in-out';
+    container.style.transform = `translateX(${translateX}px)`;
   };
 
   return (
@@ -202,11 +169,10 @@ export default function ProjectTab() {
                 setCurrentProject(index);
                 const container = containerRef.current;
                 const translateX = -index * window.innerWidth;
-                gsap.to(container, {
-                  x: translateX,
-                  duration: 0.6,
-                  ease: "power2.inOut"
-                });
+                
+                // Simple CSS transition without GSAP
+                container.style.transition = 'transform 0.6s ease-in-out';
+                container.style.transform = `translateX(${translateX}px)`;
               }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === currentProject 
@@ -227,7 +193,7 @@ export default function ProjectTab() {
             <div
               key={i}
               ref={(el) => (projectsRef.current[i] = el)}
-              className="project opacity-0 flex flex-col sm:flex-row items-center justify-center text-center sm:text-leftp-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] border border-white rounded-lg shadow-mdmin-w-full sm:min-w-[800px] h-[80vh] sm:h-auto min-w-full transition-colors duration-300"
+              className="project sm:opacity-0 flex flex-col sm:flex-row items-center justify-center text-center sm:text-leftp-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] border border-white rounded-lg shadow-mdmin-w-full sm:min-w-[800px] h-[80vh] sm:h-auto min-w-full transition-colors duration-300"
             >
               {/* Image section */}
               <div className="w-full sm:w-[500px] p-2">
