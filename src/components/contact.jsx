@@ -35,7 +35,7 @@ function Contact() {
   return (
     <section
       id="ContactSection"
-      className="w-full text-white flex items-center justify-center relative overflow-hidden">
+      className="w-full select-none text-white flex items-center justify-center relative overflow-hidden">
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-10 py-16 flex flex-col items-center">
         {/* Top Labels */}
         <motion.div
@@ -94,7 +94,7 @@ function Contact() {
         {/* Bottom Credits */}
         <div className="w-full flex items-center justify-between text-[9px] sm:text-[10px] tracking-[0.25em] text-gray-500 mt-4">
           <p>
-            <span className="font-semibold"> Email.</span> <span className="font-bold text-sm">sam.megh0305@gmail.com</span>
+            <span className="font-semibold"> Email.</span> <span className="font-bold text-sm select-all">sam.megh0305@gmail.com</span>
           </p>
           <p>
             DESIGN BY <span className="font-bold text-sm">ANKIT MEGH</span>
