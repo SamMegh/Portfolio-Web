@@ -1,17 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Navbar from "./components/navbar";
+import Cursor from "./components/cursor";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
 function App() {
 
   useEffect(() => {
-      const smoother = ScrollSmoother.create({
+       ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",
         smooth: 2,
@@ -20,9 +21,10 @@ function App() {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="overflow-x-hidden">
+    <div id="smooth-wrapper" className="overflow-x-hidden cursor-none">
 
         <div style={{opacity:1}} >
+          <Cursor />
           <Navbar />
           <div id="smooth-content">
             <HomeScreen />

@@ -19,7 +19,7 @@ function LoadingSpinner() {
 }
 
 // Simplified logo component with reliable visibility
-function LogoWithFallback({ name, urls, index }) {
+function LogoWithFallback({ name, urls }) {
   const [urlIndex, setUrlIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -46,7 +46,7 @@ function LogoWithFallback({ name, urls, index }) {
     <div 
     id="QualificationSection"
       ref={containerRef}
-      className="relative w-16 h-16 mb-3 cursor-pointer group"
+      className="relative w-16 h-16 mb-3 group"
     >
       {/* Glowing background effect */}
       <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-lg opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></div>
@@ -155,7 +155,7 @@ export default function Skills() {
               }}
               disabled={isAnimating}
               className={`px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 border border-white/20 backdrop-blur-sm ${
-                isAnimating ? 'opacity-75 cursor-not-allowed' : 'hover:scale-105'
+                isAnimating ? 'opacity-75' : 'hover:scale-105'
               }`}
             >
               {isAnimating ? 'Loading...' : 'Load More Skills'}
