@@ -30,11 +30,6 @@ body {
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* color-scheme: light dark;
-  background-color: black; 
-  background-color: #242424;
-  background: #0e0c0c;
-  color: rgb(255, 255, 255);*/
   --very-white: #ECF0F1;
   --very-light: #BDC3C7;
   --light: #7F8C8D;
@@ -73,22 +68,6 @@ body {
   padding: 4px;
   font-size: 16px;
   position: relative;
-}
-
-.homeScreentListItemAnchorTag::before {
-  content: "";
-  position: absolute;
-  top: 52%;
-  left: -10%;
-  width: 0;
-
-  height: 2px;
-  background: #fff;
-  transition: all ease 0.5s;
-}
-
-.homeScreentListItemAnchorTag:hover::before {
-  width: 120%;
 }
 
 
@@ -151,11 +130,6 @@ body {
 
 
 
-/* topmostpage  names ui */
-/* #name{
-  display: inline-block;
-  translate: 39vw;
-} */
 .cont {
   position: relative;
   display: flex;
