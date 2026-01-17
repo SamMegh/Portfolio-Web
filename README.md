@@ -1,38 +1,14 @@
 # React + Vite
 
 <p align="center">
-  <a href="https://sammegh.me" target="_blank" rel="noopener noreferrer"
-     style="
-       display:inline-block;
-       padding:12px 22px;
-       background:linear-gradient(135deg,#2563eb,#3b82f6);
-       color:#fff;
-       border-radius:10px;
-       text-decoration:none;
-       font-weight:700;
-       font-size:15px;
-       box-shadow:0 8px 20px rgba(37,99,235,0.35);
-       margin-right:12px;
-     ">
-    🚀 Visit My Portfolio
+  <a href="https://sammegh.me" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Visit%20My%20Portfolio-2563EB?style=for-the-badge&logo=google-chrome&logoColor=white" />
   </a>
-
-  <a href="https://sam0305.vercel.app/" target="_blank" rel="noopener noreferrer"
-     style="
-       display:inline-block;
-       padding:12px 22px;
-       background:linear-gradient(135deg,#111827,#374151);
-       color:#fff;
-       border-radius:10px;
-       text-decoration:none;
-       font-weight:700;
-       font-size:15px;
-       box-shadow:0 8px 20px rgba(0,0,0,0.35);
-     ">
-    🌐 Alternate Version
+  &nbsp;&nbsp;
+  <a href="https://sam0305.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐%20Alternate%20Version-111827?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
 </p>
-
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
