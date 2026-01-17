@@ -19,8 +19,8 @@ function HomeScreen() {
     <div className="Main-screen">
       <div className="wrapper overflow-hidden">
         <div className="flex">
-        <TopMostPage />
-        <RightSection className=" hidden sm:flex p-4" />
+        <TopMostPage className="flex-9/10" />
+        <RightSection className=" flex-1/10 hidden sm:flex p-4" />
         </div>
         <Skills />
         <ProjectTab className="h-screen" />

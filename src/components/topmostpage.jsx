@@ -28,7 +28,7 @@ export default function NeonText() {
           duration: 1.5,
           ease: "back.out(1.7)",
           stagger: 0.1,
-        }
+        },
       );
     });
 
@@ -53,32 +53,35 @@ export default function NeonText() {
           duration: 0.5,
           ease: "back.out(1.7)",
           stagger: 0.05,
-        }
+        },
       );
-      gsap.from(".myImg",{
-        x:500,
-        duration:1,
-        opacity:0
-      })
+      gsap.from(".myImg", {
+        x: 500,
+        duration: 1,
+        opacity: 0,
+      });
     });
 
     return () => ctx1.revert();
   }, []);
 
   const text = import.meta.env.VITE_I_AM_SAM_NAME;
-  const discription=import.meta.env.VITE_MY_DISCRIPTION;
+  const discription = import.meta.env.VITE_MY_DISCRIPTION;
 
   return (
-    <div className="flex items-center h-screen ">
+    <div className="flex items-center h-screen select-none">
       <div className="page1content sm:p-10 h-screen flex flex-col sm:flex-row-reverse justify-center sm:justify-evenly gap-5 items-center">
         {/* Image container */}
-        <div className="myImg flex-1 flex justify-center items-center overflow-hidden">
-          <img
-            className="w-[50vw] sm:w-[30vw] rounded-full bg-[rgba(0,0,0,0.1)] border border-white/10 backdrop-blur-[4px]"
-            src={profilephoto}
-            alt=""
-          />
-        </div>
+        <img
+          src={profilephoto}
+          alt="profilephoto"
+          className="myImg
+          w-[50vw] sm:w-[30vw]
+          rounded-full
+          bg-black/10
+          backdrop-blur-[4px]
+          shadow-[12px_12px_18px_rgba(103,232,249,0.8)]"
+        />
 
         {/* Text container */}
         <div className="nameContanter flex-1 flex items-center gap-6 flex-col">
@@ -89,8 +92,7 @@ export default function NeonText() {
                 <span
                   key={i}
                   ref={(el) => (lettersRef.current[i] = el)}
-                  className="neon-glow font-['headingFont']"
-                >
+                  className="neon-glow font-['headingFont']">
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
@@ -98,10 +100,8 @@ export default function NeonText() {
           </div>
           {/* discription */}
           <div className="myDiscription font-['handWrittenFont'] text-2xl">
-            {discription.split(" ").map((word,i)=>(
-              <span key={i}
-              ref={(el) => (discriptionRef.current[i] = el)}
-              >
+            {discription.split(" ").map((word, i) => (
+              <span key={i} ref={(el) => (discriptionRef.current[i] = el)}>
                 {`${word} `}
               </span>
             ))}
