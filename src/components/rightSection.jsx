@@ -1,5 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
+import {
+  AtSign,
+  Facebook,
+  Github,
+  Icon,
+  Instagram,
+  Linkedin,
+  Phone,
+} from "lucide-react";
 
 function RightSection({ className }) {
   const listRef = useRef([]);
@@ -18,6 +26,17 @@ function RightSection({ className }) {
       label: "WhatsApp",
     },
     {
+      icon: <AtSign />,
+      onClick: () => {
+        window.open(
+          "mailto:sam.megh0305@gmail.com",
+          "_blank",
+          "noopener,noreferrer",
+        );
+      },
+      label: "Email",
+    },
+    {
       icon: <Instagram />,
       onClick: () => {
         window.open(
@@ -28,17 +47,17 @@ function RightSection({ className }) {
       },
       label: "Instagram",
     },
-    {
-      icon: <Facebook />,
-      onClick: () => {
-        window.open(
-          "https://www.facebook.com/people/Ankit-Meghwal/pfbid0hBorxeABKbcpQhizWqzjL3sFLut2fhFt1SSnVdsahqWLrsbfNzz4L5aUV9918as8l/",
-          "_blank",
-          "noopener,noreferrer",
-        );
-      },
-      label: "Facebook",
-    },
+    // {
+    //   icon: <Facebook />,
+    //   onClick: () => {
+    //     window.open(
+    //       "https://www.facebook.com/people/Ankit-Meghwal/pfbid0hBorxeABKbcpQhizWqzjL3sFLut2fhFt1SSnVdsahqWLrsbfNzz4L5aUV9918as8l/",
+    //       "_blank",
+    //       "noopener,noreferrer",
+    //     );
+    //   },
+    //   label: "Facebook",
+    // },
     {
       icon: <Linkedin />,
       onClick: () => {
@@ -49,6 +68,18 @@ function RightSection({ className }) {
         );
       },
       label: "LinkedIn",
+    },
+    {
+      icon: <Github />,
+      onClick: () => {
+        window.open(
+          "https://github.com/SamMegh",
+          "_blank",
+          "noopener,noreferrer",
+        );
+      },
+
+      label: "GitHub",
     },
   ];
 
@@ -102,9 +133,9 @@ function RightSection({ className }) {
     const animation = ripple.animate(
       [
         { transform: "translate(-50%, -50%) scale(0)", opacity: 0.9 },
-        { transform: "translate(-50%, -50%) scale(10)", opacity: 0 }
+        { transform: "translate(-50%, -50%) scale(10)", opacity: 0 },
       ],
-      { duration: 700, easing: "cubic-bezier(.22,.9,.27,1)" }
+      { duration: 700, easing: "cubic-bezier(.22,.9,.27,1)" },
     );
 
     animation.onfinish = () => ripple.remove();

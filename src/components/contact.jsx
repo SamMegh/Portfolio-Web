@@ -7,7 +7,7 @@ function Contact() {
   // Social links data
   const socialLinks = [
     {
-      name: "CONTACT ME",
+      name: "EMAIL ME",
       href: "mailto:sam.megh0305@gmail.com",
       delay: 0,
     },
