@@ -1,5 +1,10 @@
 # React + Vite
 
+<p align="center">
+	<a href="https://sammegh.me" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 18px;background:#0d6efd;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;margin-right:10px;">Visit Sam's Portfolio</a>
+	<a href="https://sam0305.vercel.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:10px 18px;background:#6c757d;color:#fff;border-radius:6px;text-decoration:none;font-weight:600;">Alternate</a>
+</p>
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
