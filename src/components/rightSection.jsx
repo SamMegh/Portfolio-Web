@@ -3,6 +3,7 @@ import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
 
 function RightSection({ className }) {
   const listRef = useRef([]);
+  const lastRippleRef = useRef([]);
 
   const items = [
     {
@@ -68,6 +69,49 @@ function RightSection({ className }) {
     });
   }, []);
 
+  // Create a ripple (water-wave) element at the mouse coordinates inside the li
+  const createRipple = (e, idx) => {
+    const item = listRef.current[idx];
+    if (!item) return;
+
+    const now = Date.now();
+    const last = lastRippleRef.current[idx] || 0;
+    // throttle ripples to avoid spamming
+    if (now - last < 200) return;
+    lastRippleRef.current[idx] = now;
+
+    const rect = item.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const ripple = document.createElement("span");
+    ripple.style.position = "absolute";
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    ripple.style.width = `40px`;
+    ripple.style.height = `40px`;
+    ripple.style.background = "rgba(255,255,255,0.72)";
+    ripple.style.borderRadius = "50%";
+    ripple.style.pointerEvents = "none";
+    ripple.style.transform = "translate(-50%, -50%) scale(0)";
+    ripple.style.zIndex = "15";
+    ripple.style.boxShadow = "0 0 30px rgba(255,255,255,0.45)";
+
+    item.appendChild(ripple);
+
+    const animation = ripple.animate(
+      [
+        { transform: "translate(-50%, -50%) scale(0)", opacity: 0.9 },
+        { transform: "translate(-50%, -50%) scale(10)", opacity: 0 }
+      ],
+      { duration: 700, easing: "cubic-bezier(.22,.9,.27,1)" }
+    );
+
+    animation.onfinish = () => ripple.remove();
+    // fallback removal in case animation doesn't fire
+    setTimeout(() => ripple.remove(), 800);
+  };
+
   return (
     <div className={`justify-center items-center select-none ${className}`}>
       <ul
@@ -82,6 +126,7 @@ function RightSection({ className }) {
               "--mouse-y": "50%",
             }}
             onClick={item.onClick}
+            onMouseEnter={(e) => createRipple(e, index)}
             className="
         relative
         hover:text-black
