@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
 
 // Use motion in a no-op expression so linters don't flag it as unused
 void motion;
@@ -31,6 +33,60 @@ function Contact() {
   // Top labels split into two rows to match design
   const topRowLabels = ["DRIBBBBLE", "LINKEDIN", "BEHANCE"];
   const bottomRowLabels = ["INSTAGRAM", "FIGMA", "COMMUNITY"];
+
+  // Store reference to current toast
+  let currentToast = null;
+
+  // Handle email copy
+  const handleEmailCopy = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Dismiss previous toast if exists
+    if (currentToast) {
+      currentToast.hideToast();
+    }
+    
+    const email = "sam.megh0305@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      currentToast = Toastify({
+        text: "✓ Email copied to clipboard!",
+        duration: 3000,
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "transparent",
+          backdropFilter: "blur(4px)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
+          borderRadius: "8px",
+          fontSize: "16px",
+          padding: "12px 24px",
+          color: "#ffffff",
+          fontWeight: "500",
+        },
+      }).showToast();
+    }).catch((err) => {
+      console.error('Copy failed:', err);
+      currentToast = Toastify({
+        text: "✗ Failed to copy email",
+        duration: 3000,
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "transparent",
+          backdropFilter: "blur(4px)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
+          borderRadius: "8px",
+          fontSize: "16px",
+          padding: "12px 24px",
+          color: "#ffffff",
+          fontWeight: "500",
+        },
+      }).showToast();
+    });
+  };
 
   return (
     <section
@@ -94,7 +150,7 @@ function Contact() {
         {/* Bottom Credits */}
         <div className="w-full flex items-center justify-between text-[9px] sm:text-[10px] tracking-[0.25em] text-gray-500 mt-4">
           <p>
-            <span className="font-semibold"> Email.</span> <span className="font-bold text-sm select-all">sam.megh0305@gmail.com</span>
+            <span className="font-semibold"> Email.</span> <span className="font-bold text-sm select-all cursor-pointer hover:text-white transition-colors" onClick={handleEmailCopy}>sam.megh0305@gmail.com</span>
           </p>
           <p>
             DESIGN BY <span className="font-bold text-sm">ANKIT MEGH</span>
