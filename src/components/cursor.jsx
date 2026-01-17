@@ -71,6 +71,18 @@ function Cursor() {
         
       });
 
+    useGSAP(() => {
+      const hideElements = document.querySelectorAll(".hiddeForMe");
+      hideElements.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          gsap.to(".circle, .innerCircle", { opacity: 0, duration: 0.1, ease: "power3.out" });
+        });
+        el.addEventListener("mouseleave", () => {
+          gsap.to(".circle, .innerCircle", { opacity: 1, duration: 0.1, ease: "power3.out" });
+        });
+      });
+    }, []);
+
   return (
     <>
     <div
