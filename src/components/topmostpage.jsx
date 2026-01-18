@@ -70,8 +70,8 @@ export default function NeonText() {
     "Full-stack engineering student with expertise in React, Node.js, and cross-platform mobile development using Flutter and React Native. Skilled in creating dynamic user interfaces with GSAP animations and passionate about cybersecurity and bug hunting.";
 
   return (
-    <div className="flex items-center h-screen select-none">
-      <div className="page1content p-10 pt-0 flex flex-col sm:flex-row-reverse justify-center sm:justify-evenly gap-5 items-center">
+    <div className="flex items-center pt-6 select-none">
+      <div className="page1content p-10  flex flex-col sm:flex-row-reverse justify-center sm:justify-evenly gap-5 items-center">
         {/* Image container */}
         <img
           src={profilephoto}
@@ -85,7 +85,7 @@ export default function NeonText() {
         />
 
         {/* Text container */}
-        <div className="nameContanter flex-1 flex items-center gap-6 flex-col">
+        <div className="nameContanter flex items-center gap-6 flex-col">
           {/* name of me */}
           <div id="name" className="name">
             <h1 className="opacityControl select-none text-4xl sm:text-6xl opacity-0 font-bold text-[var(--very-white)] flex gap-1 flex-wrap">
@@ -100,7 +100,7 @@ export default function NeonText() {
             </h1>
           </div>
           {/* discription */}
-          <div className="myDiscription font-['handWrittenFont'] text-2xl">
+          <div className="myDiscription w-9/10 text-center font-['handWrittenFont'] text-2xl">
             {discription.split(" ").map((word, i) => (
               <span key={i} ref={(el) => (discriptionRef.current[i] = el)}>
                 {`${word} `}

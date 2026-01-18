@@ -11,9 +11,9 @@ function TopSideSkillIndicator() {
   return (
     <div>
       <div className="p-4">
-        <div className="absolute top-16 -left-32">
-          <div className="px-30 py-5 select-none bg-red-700 -rotate-45">
-            <span className="text-white tracking-[4px] font-bold">
+        <div className="absolute top-16 -left-37">
+          <div className="w-[500px] text-center py-5 select-none bg-red-700 -rotate-45">
+            <span className="text-white  tracking-[4px] font-bold">
                 {skills[activeSkill]}
             </span>
             
