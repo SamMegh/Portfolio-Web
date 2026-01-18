@@ -66,11 +66,12 @@ export default function NeonText() {
   }, []);
 
   const text = "I'm SAM";
-  const discription = "Full-stack engineering student with expertise in React, Node.js, and cross-platform mobile development using Flutter and React Native. Skilled in creating dynamic user interfaces with GSAP animations and passionate about cybersecurity and bug hunting.";
+  const discription =
+    "Full-stack engineering student with expertise in React, Node.js, and cross-platform mobile development using Flutter and React Native. Skilled in creating dynamic user interfaces with GSAP animations and passionate about cybersecurity and bug hunting.";
 
   return (
     <div className="flex items-center h-screen select-none">
-      <div className="page1content sm:p-10 h-screen flex flex-col sm:flex-row-reverse justify-center sm:justify-evenly gap-5 items-center">
+      <div className="page1content p-10 pt-0 flex flex-col sm:flex-row-reverse justify-center sm:justify-evenly gap-5 items-center">
         {/* Image container */}
         <img
           src={profilephoto}
