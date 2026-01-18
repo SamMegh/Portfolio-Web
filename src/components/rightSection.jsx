@@ -3,7 +3,6 @@ import {
   AtSign,
   Facebook,
   Github,
-  Icon,
   Instagram,
   Linkedin,
   Phone,
@@ -119,9 +118,9 @@ function RightSection({ className }) {
     ripple.style.position = "absolute";
     ripple.style.left = `${x}px`;
     ripple.style.top = `${y}px`;
-    ripple.style.width = `40px`;
-    ripple.style.height = `40px`;
-    ripple.style.background = "rgba(255,255,255,0.72)";
+    ripple.style.width = `20px`;
+    ripple.style.height = `20px`;
+    ripple.style.background = "rgba(255,255,255,1)";
     ripple.style.borderRadius = "50%";
     ripple.style.pointerEvents = "none";
     ripple.style.transform = "translate(-50%, -50%) scale(0)";

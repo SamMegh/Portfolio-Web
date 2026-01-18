@@ -65,8 +65,8 @@ export default function NeonText() {
     return () => ctx1.revert();
   }, []);
 
-  const text = import.meta.env.VITE_I_AM_SAM_NAME;
-  const discription = import.meta.env.VITE_MY_DISCRIPTION;
+  const text = "I'm SAM";
+  const discription = "Full-stack engineering student with expertise in React, Node.js, and cross-platform mobile development using Flutter and React Native. Skilled in creating dynamic user interfaces with GSAP animations and passionate about cybersecurity and bug hunting.";
 
   return (
     <div className="flex items-center h-screen select-none">

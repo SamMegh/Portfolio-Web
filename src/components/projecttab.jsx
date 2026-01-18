@@ -1,7 +1,9 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-const projects = JSON.parse(import.meta.env.VITE_PROJECTS);
+const projects = await import("../assets/data/projects.json", {
+  assert: { type: "json" }
+}).then((module) => module.default);
 
 gsap.registerPlugin(ScrollTrigger);
 

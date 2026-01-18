@@ -4,8 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const techLogos = JSON.parse(import.meta.env.VITE_TECH_SKILLS); 
-
+const techLogos = await import("../assets/data/skills.json", {
+  assert: { type: "json" }
+}).then((module) => module.default);
 // Simple loading spinner component
 function LoadingSpinner() {
   return (
