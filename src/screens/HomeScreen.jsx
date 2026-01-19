@@ -19,9 +19,9 @@ function HomeScreen() {
   return (
     <div className="Main-screen">
       <div className="wrapper overflow-hidden">
-        <section className="pb-3">
+        <section className=" h-screen">
            <TopSideSkillIndicator />
-        <div className="flex">
+        <div className="flex justify-center h-[80%] items-center">
         <TopMostPage className="flex-9/10" />
         <RightSection className=" flex-1/10 hidden sm:flex p-4" />
         </div>
