@@ -4,9 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const techLogos = await import("../assets/data/skills.json", {
-  assert: { type: "json" }
-}).then((module) => module.default);
+import  techLogos from "../assets/data/skills.json";
 // Simple loading spinner component
 function LoadingSpinner() {
   return (
@@ -85,12 +83,6 @@ export default function Skills() {
   // Get skills from environment variable with fallback
   let SkillData = techLogos;
   
-  // Error handling for missing or invalid environment variable
-  if (!SkillData || typeof SkillData !== 'object') {
-    console.error('VITE_TECH_SKILLS environment variable is not properly configured');
-    SkillData = {}; // Fallback to empty object
-  }
-
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 640);
@@ -119,8 +111,8 @@ export default function Skills() {
 
         {/* Skills grid - with CSS animations */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 place-items-center max-w-7xl mx-auto px-4">
-          {Object.entries(SkillData)
-            .slice(0, isMobile && !showAllSkills ? 6 : Object.entries(SkillData).length)
+          {
+            SkillData.slice(0, isMobile && !showAllSkills ? 6 : Object.entries(SkillData).length)
             .map(([name, urls], index) => {
               const isNewlyLoaded = isMobile && showAllSkills && index >= 6;
               const animationClass = isNewlyLoaded ? 'animate-fade-in-up' : 'animate-slide-up';

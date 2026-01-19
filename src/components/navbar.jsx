@@ -42,7 +42,7 @@ export default function Navbar() {
   useGSAP(() => {
     window.addEventListener("scroll", () => {
 
-      if (window.scrollY > 100) {
+      if (window.scrollY > 80) {
         const tl = gsap.timeline();
         tl.to(".logo", {
           duration: 0.2,
