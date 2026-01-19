@@ -41,20 +41,21 @@ export default function Navbar() {
   // time update
   useGSAP(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
+
       if (window.scrollY > 100) {
+        const tl = gsap.timeline();
+        tl.to(".logo", {
+          duration: 0.2,
+          opacity: 1,
+          y: 0,
+          display: "block"
+        });
         gsap.to(".timeDate", {
           duration: 0.5,
           opacity: 0,
           x: 50,
         });
-        gsap.to(".logo", {
-          duration: 0.5,
-          display: "block",
-          opacity: 1,
-          y: 0,
-        });
-        gsap.to(".mainNavToShow", {
+        tl.to(".mainNavToShow", {
           backgroundColor: "rgba(255,255,255,0.1)",
           backdropFilter: "blur(8px)",
           borderWidth: "1px",
@@ -62,26 +63,28 @@ export default function Navbar() {
           padding: "8px 25px",
           borderColor: "rgba(255,255,255,0.3)",
           duration: 0.5,
+          height:"75px",
+          minWidth:"440px"
         });
         gsap.to(".dataMain", {
           x: -100,
-          width: "40vw",
-          bottom: "10px",
+          width: "41vw",
           duration: 0.5,
         });
       } else {
+        const tl = gsap.timeline();
+        tl.to(".logo", {
+          duration: 0.2,
+          display: "none",
+          opacity: 0,
+          y: 50,
+        });
         gsap.to(".timeDate", {
           duration: 0.5,
           opacity: 1,
           x: 0,
         });
-        gsap.to(".logo", {
-          duration: 0.4,
-          display: "none",
-          opacity: 0,
-          y: 50,
-        });
-        gsap.to(".mainNavToShow", {
+        tl.to(".mainNavToShow", {
           backgroundColor: "transparent",
           borderColor: "transparent",
           borderWidth: "0px",
@@ -89,6 +92,8 @@ export default function Navbar() {
           padding: "0px",
           backdropFilter: "blur(0px)",
           duration: 0.5,
+          height:"24px",
+          width:"380px"
         });
         gsap.to(".dataMain", {
           x: 0,
@@ -109,7 +114,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className=" block  fixed right-2 bottom-0 left-1/2 -translate-x-1/2 top-auto translate-y-0 z-[10] w-fit">
+    <nav className=" block select-none fixed right-2 bottom-3 left-1/2 -translate-x-1/2 top-auto translate-y-0 z-[10] w-fit">
       <div className=" dataMain flex justify-between relative w-[95vw] items-center ">
         {/* Date & Time */}
         <div className="timeDate text-[10px] space-y-1">
@@ -127,9 +132,9 @@ export default function Navbar() {
         <div
           className={`mainNavToShow overflow-hidden flex gap-10 flex-row justify-center items-center `}>
           {/* Logo */}
-          <div className="logo hidden w-[40px]">
+          <div className="overflow-hidden w-[40px]">
             <img
-              className="w-[40px] my-[8px] relative rounded-full overflow-hidden"
+              className="logo hidden opacity-0 w-[40px] my-[8px] relative rounded-full "
               src={logo}
               alt="logo"
             />
