@@ -80,41 +80,48 @@ const CurvedLoop = ({
   const repeatedImages = ready ? Array(Math.ceil(2000 / spacing) + 2).fill(images).flat() : [];
 
   return (
-    <div
-      ref={containerRef}
-      className="min-h-screen flex items-center justify-center w-full relative overflow-hidden"
-      style={{ cursor: cursorStyle }}
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={endDrag}
-      onPointerLeave={endDrag}
-    >
-      <div 
-        className={`flex gap-10 ${className ?? ''}`}
-        style={{ 
-          transform: `translateX(${offset}px)`,
-          willChange: 'transform'
-        }}
+    <>
+      <hr className="border-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60 my-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+      <div
+        ref={containerRef}
+        className="h-fit p-2 flex items-center justify-center w-full relative overflow-hidden"
+        style={{ cursor: cursorStyle }}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerLeave={endDrag}
       >
-        {repeatedImages.map((imgData, index) => (
-          <img 
-            key={index}
-            src={imgData.src} 
-            alt={imgData.alt || `Skill ${index}`}
-            style={{ 
-              height: `${imageSize}px`, 
-              width: `${imageSize}px`,
-              objectFit: 'contain',
-              borderRadius: '50%',
-              userSelect: 'none',
-              pointerEvents: 'none',
-              flexShrink: 0
-            }}
-            draggable={false}
-          />
-        ))}
+        
+        <div 
+          className={`flex gap-10 ${className ?? ''}`}
+          style={{ 
+            transform: `translateX(${offset}px)`,
+            willChange: 'transform'
+          }}
+        >
+          {repeatedImages.map((imgData, index) => (
+            <img 
+              key={index}
+              src={imgData.src} 
+              alt={imgData.alt || `Skill ${index}`}
+              style={{ 
+                height: `${imageSize}px`, 
+                width: `${imageSize}px`,
+                objectFit: 'contain',
+                borderRadius: '50%',
+                userSelect: 'none',
+                pointerEvents: 'none',
+                flexShrink: 0
+              }}
+              draggable={false}
+            />
+          ))}
+        </div>
+      
       </div>
-    </div>
+      <hr className="border-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60 my-2 shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
+    </>
+    
   );
 };
 
