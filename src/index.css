@@ -49,44 +49,6 @@ body {
   color: #fff;
 }
 
-.homeScreenListItems {
-  list-style: none;
-  display: inline-block;
-  position: relative;
-}
-
-.homeScreentListItemAnchorTag {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  position: relative;
-}
-
-.homeScreentListItemAnchorTagMobile {
-  color: #fff;
-  text-decoration: none;
-  padding: 4px;
-  font-size: 16px;
-  position: relative;
-}
-
-
-/* mobile nav bar */
-.navBarForMobile {
-  position: absolute;
-  border: 1px solid white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0;
-  z-index: 10;
-  font-size: 8px;
-  padding: 2px;
-
-}
-
-
-
 /* top most page glow ui css */
 .neon-glow {
   text-shadow:

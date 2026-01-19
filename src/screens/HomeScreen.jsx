@@ -19,11 +19,15 @@ function HomeScreen() {
   return (
     <div className="Main-screen">
       <div className="wrapper overflow-hidden">
-        <TopSideSkillIndicator />
+        <section className="pb-3">
+           <TopSideSkillIndicator />
         <div className="flex">
         <TopMostPage className="flex-9/10" />
         <RightSection className=" flex-1/10 hidden sm:flex p-4" />
         </div>
+
+        </section>
+       
         <Skills />
         <ProjectTab className="h-screen" />
         <div>

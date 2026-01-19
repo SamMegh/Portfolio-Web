@@ -24,7 +24,7 @@ function TopSideSkillIndicator() {
             {skills.map((skill, index) => (
               <li
                 key={index}
-                className="relative group px-2 py-1 cursor-pointer transition-colors duration-300"
+                className="relative group px-2 py-1 transition-colors duration-300"
                 onClick={() => setActiveSkill(index)}>
                 <span
                   className={`relative z-10 ${activeSkill === index ? "text-cyan-300" : "text-white/70"}`}>
