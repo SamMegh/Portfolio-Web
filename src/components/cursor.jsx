@@ -40,7 +40,7 @@ function Cursor() {
     }, []);
 
  useGSAP(() => {
-      const links = document.querySelectorAll("a, button, .cursor-pointer, .project, .group");
+      const links = document.querySelectorAll("a, button, .cursor-pointer, .project, .group, .skillSection ");
         links.forEach((link) => {
             link.addEventListener("mouseenter", () => {
                 gsap.to(".circle", { scale: 1.5, borderWidth: 1, duration: 0.3, ease: "power3.out" });

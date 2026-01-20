@@ -1,92 +1,205 @@
 [
-    {"JavaScript": [
-        "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-        "https://img.icons8.com/color/480/javascript--v1.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-    ]},
-    {"HTML": [
-        "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-        "https://img.icons8.com/color/480/html-5--v1.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-    ]},
-    {"CSS": [
-        "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-        "https://img.icons8.com/color/480/css3.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-    ]},
-    {"Node.js": [
-        "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg",
-        "https://img.icons8.com/color/480/nodejs.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-    ]},
-    {"Express": [
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
-        "https://img.icons8.com/ios/500/express-js.png"
-    ]},
-    {"MongoDB": [
-        "https://upload.wikimedia.org/wikipedia/commons/4/45/MongoDB_Logo.svg",
-        "https://img.icons8.com/color/480/mongodb.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-    ]},
-    {"React": [
-        "https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg",
-        "https://img.icons8.com/color/480/react-native.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-    ]},
-    {"React Native": [
-        "https://reactnative.dev/img/header_logo.svg",
-        "https://img.icons8.com/color/480/react-native.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-    ]},
-    {"Tailwind CSS": [
-        "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-        "https://img.icons8.com/color/480/tailwindcss.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-    ]},
-    {"DaisyUI": [
-        "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
-        "https://avatars.githubusercontent.com/u/71592462?s=200&v=4",
-        "https://i.ibb.co/5sYgN1X/daisyui-alt.png"
-    ]},
-    {"Flutter": [
-        "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png",
-        "https://img.icons8.com/color/480/flutter.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-    ]},
-    {"Python": [
-        "https://www.python.org/static/community_logos/python-logo.png",
-        "https://img.icons8.com/color/480/python.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-    ]},
-    {"ComfyUI": [
-        "https://github.com/comfyanonymous/ComfyUI/raw/master/comfyui_logo.png",
-        "https://avatars.githubusercontent.com/u/125986776?s=200&v=4",
-        "https://i.ibb.co/f8zM8zF/comfyui-alt.png"
-    ]},
-    {"CRON": [
-        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Cron-linux.svg",
-        "https://img.icons8.com/ios/500/clock.png",
-        "https://i.ibb.co/k59CsLj/cron-alt.png"
-    ]},
-    {"Firebase": [
-        "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
-        "https://img.icons8.com/color/480/firebase.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-    ]},
-    {"Google Cloud (GCP)": [
-        "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg",
-        "https://img.icons8.com/color/480/google-cloud.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-    ]},
-    {"GitHub": [
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-        "https://img.icons8.com/material-outlined/480/github.png",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-    ]},
-    {"Socket.io": [
-        "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg",
-        "https://socket.io/images/logo-dark.svg",
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
-    ]}
+    {
+        "JavaScript": [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+            "https://img.icons8.com/color/480/javascript--v1.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        ]
+    },
+    {
+        "HTML": [
+            "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+            "https://img.icons8.com/color/480/html-5--v1.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        ]
+    },
+    {
+        "CSS": [
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+            "https://img.icons8.com/color/480/css3.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        ]
+    },
+    {
+        "Git": [
+            "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
+            "https://img.icons8.com/color/480/git.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        ]
+    },
+    {
+        "JAVA": [
+            "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+            "https://img.icons8.com/color/480/java-coffee-cup-logo--v1.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+        ]
+    },
+    {
+        "C++": [
+            "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+            "https://img.icons8.com/color/480/c-plus-plus-logo.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+        ]
+    },
+    {
+        "C#": [
+            "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+            "https://img.icons8.com/color/480/c-sharp-logo.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+        ]
+    },
+    {
+        "Node.js": [
+            "https://img.icons8.com/color/480/nodejs.png",
+            "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        ]
+    },
+    {
+        "Express": [
+            "https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png",
+            "https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png",
+            "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png"
+        ]
+    },
+    {
+        "MongoDB": [
+            "https://img.icons8.com/color/480/mongodb.png",
+            "https://upload.wikimedia.org/wikipedia/commons/4/45/MongoDB_Logo.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+        ]
+    },
+    {
+        "React": [
+            "https://img.icons8.com/color/480/react-native.png",
+            "https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        ]
+    },
+    {
+        "Azure": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure_Logo.svg",
+            "https://img.icons8.com/color/480/azure-1.png"
+        ]
+    },
+    {
+        "TypeScript": [
+            "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+            "https://img.icons8.com/color/480/typescript.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+        ]
+    },
+    {
+        "Next.js": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+            "https://img.icons8.com/ios/500/nextjs.png"
+        ]
+    },
+    {
+        "Sqlite": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg",
+            "https://img.icons8.com/ios/500/database.png"
+        ]
+    },
+    {
+        "Bootstrap": [
+            "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg",
+            "https://img.icons8.com/color/480/bootstrap.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg"
+        ]
+    },
+    {
+        "MySQL": [
+            "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg",
+            "https://img.icons8.com/ios/500/mysql-logo.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        ]
+    },
+    {
+        "Token.js": [
+            "https://cdn.worldvectorlogo.com/logos/jwt-3.svg",
+            "https://raw.githubusercontent.com/auth0/node-jsonwebtoken/master/logo.png",
+            "https://i.ibb.co/7G6b0yK/jwt-alt.png"
+        ]
+    },
+    {
+        "React Native": [
+            "https://reactnative.dev/img/header_logo.svg",
+            "https://img.icons8.com/color/480/react-native.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        ]
+    },
+    {
+        "Tailwind CSS": [
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+            "https://img.icons8.com/color/480/tailwindcss.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+        ]
+    },
+    {
+        "DaisyUI": [
+            "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg",
+            "https://avatars.githubusercontent.com/u/71592462?s=200&v=4",
+            "https://i.ibb.co/5sYgN1X/daisyui-alt.png"
+        ]
+    },
+    {
+        "Flutter": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png",
+            "https://img.icons8.com/color/480/flutter.png"
+        ]
+    },
+    {
+        "Python": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+            "https://www.python.org/static/community_logos/python-logo.png",
+            "https://img.icons8.com/color/480/python.png"
+        ]
+    },
+    {
+        "ComfyUI": [
+            "https://avatars.githubusercontent.com/u/125986776?s=200&v=4",
+            "https://github.com/comfyanonymous/ComfyUI/raw/master/comfyui_logo.png",
+            "https://i.ibb.co/f8zM8zF/comfyui-alt.png"
+        ]
+    },
+    {
+        "CRON": [
+            "https://nodecron.com/node-cron.png",
+            "https://upload.wikimedia.org/wikipedia/commons/b/bb/Cron-linux.svg",
+            "https://i.ibb.co/k59CsLj/cron-alt.png"
+        ]
+    },
+    {
+        "Firebase": [
+            "https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png",
+            "https://img.icons8.com/color/480/firebase.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+        ]
+    },
+    {
+        "Google Cloud (GCP)": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg",
+            "https://img.icons8.com/color/480/google-cloud.png"
+        ]
+    },
+    {
+        "GitHub": [
+            "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            "https://img.icons8.com/material-outlined/480/github.png",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        ]
+    },
+    {
+        "Socket.io": [
+            "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg",
+            "https://socket.io/images/logo-dark.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
+        ]
+    }
 ]

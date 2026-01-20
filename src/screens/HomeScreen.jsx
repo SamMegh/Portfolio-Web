@@ -3,7 +3,7 @@ import skills from "../assets/data/skills.json";
 import { gsap } from "gsap";
 import TopMostPage from "../components/topmostpage";
 import ProjectTab from "../components/projecttab";
-import Skills from "../components/Qualifications";
+// import Skills from "../components/Qualifications";
 import Contact from "../components/contact";
 import RightSection from "../components/rightSection";
 import TopSideSkillIndicator from "../components/topSideSkillIndicator";
@@ -32,10 +32,11 @@ function HomeScreen() {
         <RightSection className=" flex-1/10 hidden sm:flex p-4" />
         </div>
         </section>
-       <CurvedLoop images={curvedLoopData} />
+       
         {/* <Skills /> */}
         <ProjectTab className="h-screen" />
         <div>
+          <CurvedLoop images={curvedLoopData} />
           <Contact />
         </div>
       </div>
