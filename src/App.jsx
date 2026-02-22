@@ -6,6 +6,7 @@ import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Navbar from "./components/navbar";
 import Cursor from "./components/cursor";
+import ProjectScreen from "./screens/projectScreen";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
@@ -27,7 +28,7 @@ function App() {
           <Cursor />
           <Navbar />
           <div id="smooth-content">
-            <HomeScreen />
+            <ProjectScreen />
             {/* Add more sections here */}
           </div>
         </div>
