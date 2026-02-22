@@ -7,6 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Navbar from "./components/navbar";
 import Cursor from "./components/cursor";
 import ProjectScreen from "./screens/projectScreen";
+import ThreePillorScreen from "./screens/threePillorScreen";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
@@ -22,13 +23,13 @@ function App() {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="overflow-x-hidden cursor-none">
+    <div id="smooth-wrapper" className="overflow-x-hidden">
 
         <div style={{opacity:1}} >
-          <Cursor />
-          <Navbar />
+          {/* <Cursor /> */}
+          {/* <Navbar /> */}
           <div id="smooth-content">
-            <ProjectScreen />
+            <ThreePillorScreen />
             {/* Add more sections here */}
           </div>
         </div>
