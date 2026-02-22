@@ -81,59 +81,78 @@ function ThreePillorScreen() {
         </section>
         {/* pillors */}
         <section className="w-screen h-fit flex justify-center items-center relative">
-          {/* full stack engineer */}
-          <div className="bg-yellow-500/10 z-10 border-yellow-400 border h-100 w-70 rounded-2xl p-6 absolute top-5 pillor-1 backdrop-blur-md">
-            <h1 className="text-2xl font-bold text-yellow-400 mb-4">
+          {/* Full Stack */}
+          <div
+            className="bg-[#111111] border z-10 border-white/10 h-100 w-70 rounded-2xl p-8 absolute top-5 pillor-1
+                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+                      hover:border-violet-500/60 hover:-translate-y-2
+                      transition-all duration-500">
+            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+
+            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
               Full-Stack Engineering
             </h1>
 
-            <p className="text-sm text-gray-300 leading-relaxed mb-4">
-              I design and build scalable web applications from frontend to
-              backend. Clean architecture, optimized APIs, and production-ready
-              systems.
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
+              Designing scalable web systems with clean architecture, secure
+              backend logic, and production-ready performance.
             </p>
 
-            <ul className="text-xs text-gray-400 space-y-2">
-              <li>• Modern UI with React</li>
-              <li>• Secure backend with Node & Express</li>
-              <li>• Database architecture & API design</li>
-              <li>• Deployment & performance optimization</li>
+            <ul className="text-xs text-gray-500 space-y-3">
+              <li>Frontend & backend architecture</li>
+              <li>Secure API systems</li>
+              <li>Database optimization</li>
+              <li>Deployment strategy</li>
             </ul>
           </div>
-          {/* mobile developer */}
-          <div className="bg-green-500/10 border-green-400 border z-20 h-100 w-70 rounded-2xl p-6 absolute top-5 pillor-2 backdrop-blur-md">
-            <h1 className="text-2xl font-bold text-green-400 mb-4">
+
+          {/* Mobile */}
+          <div
+            className="bg-[#111111] border z-20 border-white/10 h-100 w-70 rounded-2xl p-8 absolute top-5 pillor-2
+                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+                      hover:border-violet-500/60 hover:-translate-y-2
+                      transition-all duration-500">
+            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+
+            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
               Mobile Development
             </h1>
 
-            <p className="text-sm text-gray-300 leading-relaxed mb-4">
-              Cross-platform mobile apps built for speed, usability, and
-              scalability. Native performance with modern frameworks.
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
+              Cross-platform applications built for performance, usability, and
+              seamless real-world scalability.
             </p>
 
-            <ul className="text-xs text-gray-400 space-y-2">
-              <li>• React Native / Expo</li>
-              <li>• Clean UI & smooth animations</li>
-              <li>• API integration & state management</li>
-              <li>• Play Store ready deployment</li>
+            <ul className="text-xs text-gray-500 space-y-3">
+              <li>React Native architecture</li>
+              <li>Performance-focused UI</li>
+              <li>Secure API integration</li>
+              <li>Production deployment</li>
             </ul>
           </div>
-          {/* web security specialist */}
-          <div className="bg-red-500/10 border-red-400 border z-10 h-100 w-70 rounded-2xl p-6 absolute top-5 pillor-3 backdrop-blur-md">
-            <h1 className="text-2xl font-bold text-red-400 mb-4">
+
+          {/* Security */}
+          <div
+            className="bg-[#111111] border z-10 border-white/10 h-100 w-70 rounded-2xl p-8 absolute top-5 pillor-3
+                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+                      hover:border-violet-500/60 hover:-translate-y-2
+                      transition-all duration-500">
+            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+
+            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
               Web Penetration Testing
             </h1>
 
-            <p className="text-sm text-gray-300 leading-relaxed mb-4">
-              I identify vulnerabilities before attackers do. Real-world testing
-              focused on security, authentication, and API protection.
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
+              Offensive security testing focused on identifying real-world
+              vulnerabilities before they become business risks.
             </p>
 
-            <ul className="text-xs text-gray-400 space-y-2">
-              <li>• OWASP vulnerability testing</li>
-              <li>• Authentication & session flaws</li>
-              <li>• API security assessment</li>
-              <li>• Security hardening recommendations</li>
+            <ul className="text-xs text-gray-500 space-y-3">
+              <li>OWASP vulnerability analysis</li>
+              <li>Authentication auditing</li>
+              <li>API security testing</li>
+              <li>Security hardening strategy</li>
             </ul>
           </div>
         </section>
