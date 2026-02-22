@@ -10,6 +10,18 @@ function ThreePillorScreen() {
     const pillor2 = document.querySelector(".pillor-2");
     const pillor3 = document.querySelector(".pillor-3");
     const tl = gsap.timeline();
+    gsap.fromTo(".introItems",
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power1.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".introDiv",
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true            
+        },
+      },
+    );
     tl.fromTo(
       pillor2,
       { y: 100, opacity: 0 },
@@ -30,10 +42,9 @@ function ThreePillorScreen() {
       { y: 0, x: 0, opacity: 0 },
       {
         rotate: -10,
-        x: -280,
+        x: -300,
         y: 20,
         opacity: 1,
-        duration: 2.5,
         ease: "back.inOut(2)",
         scrollTrigger: {
           trigger: ".pillor-1",
@@ -48,9 +59,8 @@ function ThreePillorScreen() {
       { y: 0, x: 0, opacity: 0 },
       {
         rotate: 10,
-        x: 280,
+        x: 300,
         y: 20,
-        duration: 2.5,
         ease: "back.inOut(2)",
         opacity: 1,
         scrollTrigger: {
@@ -70,45 +80,22 @@ function ThreePillorScreen() {
       <div className="relative top-[100vh] h-screen">
         {/* intro section */}
         <section>
-          <div>
-            <h1 className="text-4xl font-bold text-center pt-20">
+          <div className="introDiv">
+            <h1 className="introItems text-4xl font-bold text-center pt-20">
               I Build What Others Can’t Break
             </h1>
-            <p className="text-lg text-center mt-4 mb-10">
+            <p className="introItems text-lg text-center mt-4 mb-10">
               Three disciplines. One standard of excellence.
             </p>
           </div>
         </section>
         {/* pillors */}
         <section className="w-screen h-fit flex justify-center items-center relative">
-          {/* Full Stack */}
-          <div
-            className="bg-[#111111] border z-10 border-white/10 h-100 w-70 rounded-2xl p-8 absolute top-5 pillor-1
-                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
-                      transition-all duration-500">
-            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
 
-            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
-              Full-Stack Engineering
-            </h1>
-
-            <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              Designing scalable web systems with clean architecture, secure
-              backend logic, and production-ready performance.
-            </p>
-
-            <ul className="text-xs text-gray-500 space-y-3">
-              <li>Frontend & backend architecture</li>
-              <li>Secure API systems</li>
-              <li>Database optimization</li>
-              <li>Deployment strategy</li>
-            </ul>
-          </div>
 
           {/* Mobile */}
           <div
-            className="bg-[#111111] border z-20 border-white/10 h-100 w-70 rounded-2xl p-8 absolute top-5 pillor-2
+            className="bg-[#111111] border z-10 border-white/10 h-120 w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-1
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
                       hover:border-violet-500/60 hover:-translate-y-2
                       transition-all duration-500">
@@ -130,10 +117,33 @@ function ThreePillorScreen() {
               <li>Production deployment</li>
             </ul>
           </div>
+          {/* Full Stack */}
+          <div
+            className="bg-[#111111] border z-20 border-white/10 h-120 w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-2
+                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+                      hover:border-violet-500/60 hover:-translate-y-2
+                      transition-all duration-500">
+            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
 
+            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
+              Full-Stack Engineering
+            </h1>
+
+            <p className="text-sm text-gray-400 leading-relaxed mb-6">
+              Designing scalable web systems with clean architecture, secure
+              backend logic, and production-ready performance.
+            </p>
+
+            <ul className="text-xs text-gray-500 space-y-3">
+              <li>Frontend & backend architecture</li>
+              <li>Secure API systems</li>
+              <li>Database optimization</li>
+              <li>Deployment strategy</li>
+            </ul>
+          </div>
           {/* Security */}
           <div
-            className="bg-[#111111] border z-10 border-white/10 h-100 w-70 rounded-2xl p-8 absolute top-5 pillor-3
+            className="bg-[#111111] border z-10 border-white/10 h-120  w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-3
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
                       hover:border-violet-500/60 hover:-translate-y-2
                       transition-all duration-500">
@@ -155,6 +165,7 @@ function ThreePillorScreen() {
               <li>Security hardening strategy</li>
             </ul>
           </div>
+
         </section>
         <div className="h-[300vh]"></div>
       </div>
