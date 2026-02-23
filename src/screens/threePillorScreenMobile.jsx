@@ -1,8 +1,7 @@
 
 function ThreePillorScreenMobile() {
   return (
-    <div className="h-[300vh]">
-      <div className="relative top-[100vh] h-screen">
+      <div className="relative h-screen">
         {/* intro section */}
         <section>
           <div>
@@ -88,11 +87,7 @@ function ThreePillorScreenMobile() {
               <li>Production deployment</li>
             </ul>
           </div>
-
-
         </section>
-        <div className="h-[300vh]"></div>
-      </div>
     </div>
   );
 }
