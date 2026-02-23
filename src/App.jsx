@@ -10,6 +10,7 @@ import ProjectScreen from "./screens/projectScreen";
 import ThreePillorScreen from "./screens/threePillorScreen";
 import ThreePillorScreenMobile from "./screens/threePillorScreenMobile";
 import Contact from "./screens/contactScreen";
+import AboutSection from "./screens/aboutSection";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
@@ -30,12 +31,14 @@ function App() {
 
         <div style={{opacity:1}} >
           {/* <Cursor /> */}
-          <Navbar />
+          {/* <Navbar /> */}
           <div id="smooth-content">
-            <HomeScreen />
+            {/* <HomeScreen />
               <ProjectScreen />
             {isMobile ?<ThreePillorScreenMobile/>: <ThreePillorScreen />}
-            <Contact />
+            <Contact /> */}
+            <div className="h-screen"></div>
+            <AboutSection/>
           </div>
         </div>
     </div>

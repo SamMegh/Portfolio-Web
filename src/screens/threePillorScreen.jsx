@@ -81,7 +81,7 @@ function ThreePillorScreen() {
     };
   }, []);
   return (
-      <div className="relative h-screen mb-20">
+      <div className="mb-20 min-h-170">
         {/* intro section */}
         <section>
           <div className="introDiv">
@@ -228,7 +228,6 @@ function ThreePillorScreen() {
             </div>
           </div>
         </section>
-        <div className="h-[300vh]"></div>
       </div>
   );
 }
