@@ -60,11 +60,11 @@ export default function Navbar() {
           backdropFilter: "blur(8px)",
           borderWidth: "1px",
           borderRadius: "24px",
-          padding: "8px 25px",
+          padding: "8px 5px",
           borderColor: "rgba(255,255,255,0.3)",
           duration: 0.5,
-          height:"75px",
-          minWidth:"440px"
+          height:"55px",
+          minWidth:"300px"
         });
         gsap.to(".dataMain", {
           x: -100,
@@ -93,7 +93,7 @@ export default function Navbar() {
           backdropFilter: "blur(0px)",
           duration: 0.5,
           height:"24px",
-          width:"380px"
+          width:"320px"
         });
         gsap.to(".dataMain", {
           x: 0,
@@ -130,11 +130,11 @@ export default function Navbar() {
 
         {/* MAIN Nav bar */}
         <div
-          className={`mainNavToShow overflow-hidden flex gap-10 flex-row justify-center items-center `}>
+          className={`mainNavToShow overflow-hidden flex gap-6 flex-row justify-center items-center `}>
           {/* Logo */}
           <div className="overflow-hidden w-[40px]">
             <img
-              className="logo hidden opacity-0 w-[40px] my-[8px] relative rounded-full "
+              className="logo hidden opacity-0 w-[35px] my-[8px] relative rounded-full "
               src={logo}
               alt="logo"
             />
@@ -142,7 +142,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="menu inline-block">
-            <ul className="flex space-x-8 w-fit">
+            <ul className="flex space-x-4 w-fit text-xs">
               <li>
                 <button
                   onClick={() => {

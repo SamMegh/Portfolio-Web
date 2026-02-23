@@ -1,11 +1,17 @@
 import { motion } from "framer-motion";
+import skills from "../assets/data/skills.json";
 import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
+import CurvedLoop from "../components/infiniteSkillScroller";
 
 // Use motion in a no-op expression so linters don't flag it as unused
 void motion;
 
 function Contact() {
+    const curvedLoopData = skills.map(skill => ({
+      alt: Object.keys(skill)[0],
+      src: Object.values(skill)[0][0]
+    }));
   // Social links data
   const socialLinks = [
     {
@@ -88,7 +94,8 @@ function Contact() {
     });
   };
 
-  return (
+  return (<>
+  <CurvedLoop images={curvedLoopData} />
     <section
       id="ContactSection"
       className="w-full select-none text-white flex items-center justify-center relative overflow-hidden">
@@ -158,6 +165,7 @@ function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

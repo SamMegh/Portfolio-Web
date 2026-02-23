@@ -81,7 +81,7 @@ function ThreePillorScreen() {
     };
   }, []);
   return (
-      <div className="relative h-screen">
+      <div className="relative h-screen mb-20">
         {/* intro section */}
         <section>
           <div className="introDiv">
@@ -97,7 +97,7 @@ function ThreePillorScreen() {
         <section className="w-screen h-fit flex justify-center items-center relative">
           {/* Mobile */}
           <div
-            className="bg-[#111111] border z-10 border-white/10 h-120 flex justify-between flex-col w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-1
+            className="bg-[#111111] border z-10 border-white/10 h-110 flex justify-between flex-col w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-1
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
                       hover:border-violet-500/60 hover:-translate-y-2
                       transition-all duration-500">
@@ -136,7 +136,7 @@ function ThreePillorScreen() {
           </div>
           {/* Full Stack */}
           <div
-            className="bg-[#111111] border z-20 border-white/10 h-120 flex justify-between flex-col w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-2
+            className="bg-[#111111] border z-20 border-white/10 h-110 flex justify-between flex-col w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-2
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
                       hover:border-violet-500/60 hover:-translate-y-2
                       transition-all duration-500">
@@ -177,7 +177,7 @@ function ThreePillorScreen() {
           </div>
           {/* Security */}
           <div
-            className="bg-[#111111] border z-10 border-white/10 h-120 flex justify-between flex-col  w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-3
+            className="bg-[#111111] border z-10 border-white/10 h-110 flex justify-between flex-col  w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-3
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
                       hover:border-violet-500/60 hover:-translate-y-2
                       transition-all duration-500">

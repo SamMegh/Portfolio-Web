@@ -8,10 +8,13 @@ import Navbar from "./components/navbar";
 import Cursor from "./components/cursor";
 import ProjectScreen from "./screens/projectScreen";
 import ThreePillorScreen from "./screens/threePillorScreen";
+import ThreePillorScreenMobile from "./screens/threePillorScreenMobile";
+import Contact from "./screens/contactScreen";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
 function App() {
+  let isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
        ScrollSmoother.create({
@@ -27,10 +30,12 @@ function App() {
 
         <div style={{opacity:1}} >
           {/* <Cursor /> */}
-          {/* <Navbar /> */}
+          <Navbar />
           <div id="smooth-content">
-            <ThreePillorScreen />
-            {/* Add more sections here */}
+            <HomeScreen />
+              <ProjectScreen />
+            {isMobile ?<ThreePillorScreenMobile/>: <ThreePillorScreen />}
+            <Contact />
           </div>
         </div>
     </div>
