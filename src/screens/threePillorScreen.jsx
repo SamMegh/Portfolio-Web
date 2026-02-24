@@ -85,10 +85,10 @@ function ThreePillorScreen() {
         {/* intro section */}
         <section>
           <div className="introDiv mb-10">
-            <h1 className="introItems text-4xl text-center font-bold text-white leading-tight">
-              I Build What Others Can’t Break
+            <h1 className="introItems t-4xl md:text-6xl text-center font-bold text-white leading-tight">
+              I Build What Others <span className="text-violet-400">Can’t Break</span> 
             </h1>
-            <p className="introItems text-[11px] text-center tracking-[0.25em] uppercase text-violet-400 font-medium">
+            <p className="introItems text-gray-500  text-center tracking-[0.25em] uppercase font-medium">
               Three disciplines. One standard of excellence.
             </p>
           </div>

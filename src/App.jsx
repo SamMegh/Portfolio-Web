@@ -10,7 +10,7 @@ import ProjectScreen from "./screens/projectScreen";
 import ThreePillorScreen from "./screens/threePillorScreen";
 import ThreePillorScreenMobile from "./screens/threePillorScreenMobile";
 import Contact from "./screens/contactScreen";
-import AboutSection from "./screens/aboutSection";
+import AboutSection from "./screens/aboutPage/aboutSection";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
