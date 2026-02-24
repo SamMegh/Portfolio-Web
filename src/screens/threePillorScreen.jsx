@@ -21,7 +21,7 @@ function ThreePillorScreen() {
         stagger: 0.2,
         scrollTrigger: {
           trigger: ".introDiv",
-          start: "top 60%",
+          start: "top 80%",
           end: "top 30%",
           scrub: true,
         },
@@ -84,11 +84,11 @@ function ThreePillorScreen() {
       <div className="mb-20 min-h-170">
         {/* intro section */}
         <section>
-          <div className="introDiv">
-            <h1 className="introItems text-4xl font-bold text-center pt-20">
+          <div className="introDiv mb-10">
+            <h1 className="introItems text-4xl text-center font-bold text-white leading-tight">
               I Build What Others Can’t Break
             </h1>
-            <p className="introItems text-lg text-center mt-4 mb-10">
+            <p className="introItems text-[11px] text-center tracking-[0.25em] uppercase text-violet-400 font-medium">
               Three disciplines. One standard of excellence.
             </p>
           </div>

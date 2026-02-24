@@ -53,10 +53,10 @@ const principles = [
 ];
 
 const process = [
-  { num: "01", title: "Understand", icon: Target },
-  { num: "02", title: "Architect", icon: Layers },
-  { num: "03", title: "Engineer", icon: Code2 },
-  { num: "04", title: "Deliver", icon: Zap },
+  { num: "01", title: "Understand", icon: Target, desc: "Deep-dive into requirements, constraints, and goals to define what success looks like." },
+  { num: "02", title: "Architect", icon: Layers, desc: "Design scalable, maintainable systems with clear boundaries and future-proof foundations." },
+  { num: "03", title: "Engineer", icon: Code2, desc: "Build with precision — clean code, thorough testing, and performance optimization." },
+  { num: "04", title: "Deliver", icon: Zap, desc: "Ship production-ready solutions with documentation and seamless handoff." },
 ];
 
 const STORY_TEXT =
@@ -84,8 +84,6 @@ function AboutSection() {
   const processCardsRef = useRef([]);
   const processLineRef = useRef(null);
 
-  const closingRef = useRef(null);
-
   /* split text into characters */
   const storyChars = useMemo(() => STORY_TEXT.split(""), []);
 
@@ -96,7 +94,7 @@ function AboutSection() {
         scrollTrigger: {
           trigger: heroTagRef.current,
           start: "top 80%",
-          end: "top 30%",
+          end: "top 0%",
           scrub: 1.2,
         },
       });
@@ -139,7 +137,7 @@ function AboutSection() {
           scrollTrigger: {
             trigger: storyRef.current,
             start: "top 60%",
-            end: "top -50%",
+            end: "top -20%",
             scrub: 0.5,
           },
         });
@@ -219,8 +217,8 @@ function AboutSection() {
           ease: "none",
           scrollTrigger: {
             trigger: processRef.current,
-            start: "top 65%",
-            end: "bottom 50%",
+            start: "top 50%",
+            end: "top 0%",
             scrub: 1,
           },
         }
@@ -239,29 +237,12 @@ function AboutSection() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: processRef.current,
-              start: "top 70%",
+              start: "top 80%",
               toggleActions: "play none none none",
             },
           }
         );
       });
-
-      /* ──────── CLOSING ──────── */
-      gsap.fromTo(
-        closingRef.current,
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: closingRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
     }, rootRef);
 
     return () => ctx.revert();
@@ -326,7 +307,7 @@ function AboutSection() {
           <div className="absolute bottom-20 left-0 w-[400px] h-[400px] rounded-full bg-violet-600/[0.05] blur-[120px]" />
         </div>
 
-        <div className="sticky top-0 min-h-screen flex items-center justify-center px-6 md:px-16">
+        <div className="sticky top-0 mb-30 flex items-center justify-center px-6 md:px-16">
           <div className="relative z-10 max-w-4xl">
             {/* blinking cursor styled label */}
             <div className="flex items-center gap-3 mb-8">
@@ -350,8 +331,6 @@ function AboutSection() {
                   {char === " " ? "\u00A0" : char}
                 </span>
               ))}
-              {/* blinking block cursor at end */}
-              <span className="inline-block w-[3px] h-[1.2em] bg-violet-400 ml-1 align-middle animate-[blink_1s_step-end_infinite]" />
             </p>
           </div>
         </div>
@@ -362,14 +341,14 @@ function AboutSection() {
       ═══════════════════════════════════════════ */}
       <section
         ref={statBarRef}
-        className="relative w-full border-y border-white/[0.06] bg-white/[0.02]"
+        className="relative w-full "
       >
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (
             <div
               key={i}
               ref={(el) => (statItemsRef.current[i] = el)}
-              className={`flex flex-col items-center justify-center py-14 md:py-20 ${
+              className={`flex flex-col items-center justify-center py-10 md:py-10 ${
                 i < stats.length - 1
                   ? "border-r border-white/[0.06]"
                   : ""
@@ -387,7 +366,7 @@ function AboutSection() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 4 — PRINCIPLES  (clean grid)
+          SECTION 4 — PRINCIPLES  (minimal list)
       ═══════════════════════════════════════════ */}
       <section
         ref={principleSectionRef}
@@ -400,7 +379,7 @@ function AboutSection() {
         </div>
 
         {/* section header */}
-        <div className="relative z-10 max-w-7xl mx-auto mb-20 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto mb-20 ">
           <span className="inline-block px-4 py-1.5 rounded-full border border-violet-500/20 text-[10px] tracking-[0.3em] uppercase text-violet-400 mb-6">
             Core Principles
           </span>
@@ -409,65 +388,54 @@ function AboutSection() {
           </h2>
         </div>
 
-        {/* principle cards - 2x2 grid */}
-        <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/* principle list */}
+        <div className="relative z-10 max-w-7xl mx-auto space-y-0">
           {principles.map((p, i) => {
             const Icon = p.icon;
             return (
               <div
                 key={i}
                 ref={(el) => (principleCardsRef.current[i] = el)}
-                className="group relative rounded-3xl p-8 md:p-10 overflow-hidden transition-all duration-500 hover:scale-[1.02]"
-                style={{
-                  background: `linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)`,
-                  border: `1px solid rgba(255,255,255,0.06)`,
-                }}
+                className="group border-t border-white/10 py-12 md:py-16 flex flex-col md:flex-row md:items-center gap-6 md:gap-12 cursor-default"
               >
-                {/* hover glow */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-                  style={{
-                    background: `radial-gradient(circle at 30% 30%, ${p.accent}08 0%, transparent 60%)`,
-                  }}
-                />
-
-                {/* number watermark */}
+                {/* number */}
                 <span
-                  className="absolute -top-4 -right-2 text-[8rem] md:text-[10rem] font-black leading-none select-none pointer-events-none"
-                  style={{ color: `${p.accent}08` }}
+                  className="text-6xl md:text-8xl font-black leading-none tracking-tighter transition-colors duration-500"
+                  style={{ color: "rgba(255,255,255,0.05)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = p.accent + "30")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.05)")}
                 >
                   {p.num}
                 </span>
 
-                {/* content */}
-                <div className="relative z-10">
-                  {/* icon */}
-                  <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
-                    style={{ backgroundColor: p.accent + "15" }}
-                  >
-                    <Icon className="w-7 h-7" style={{ color: p.accent }} />
-                  </div>
+                {/* icon */}
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6"
+                  style={{ backgroundColor: p.accent + "12" }}
+                >
+                  <Icon className="w-8 h-8" style={{ color: p.accent }} />
+                </div>
 
-                  {/* title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight">
+                {/* content */}
+                <div className="flex-1">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight group-hover:translate-x-2 transition-transform duration-500">
                     {p.title}
                   </h3>
-
-                  {/* description */}
-                  <p className="text-base text-gray-400 leading-relaxed">
+                  <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
                     {p.text}
                   </p>
-
-                  {/* bottom accent line */}
-                  <div
-                    className="mt-8 h-1 w-12 rounded-full transition-all duration-500 group-hover:w-24"
-                    style={{ backgroundColor: p.accent }}
-                  />
                 </div>
+
+                {/* accent dot */}
+                <div
+                  className="hidden md:block w-3 h-3 rounded-full flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundColor: p.accent }}
+                />
               </div>
             );
           })}
+          {/* bottom border */}
+          <div className="border-t border-white/10" />
         </div>
       </section>
 
@@ -476,7 +444,7 @@ function AboutSection() {
       ═══════════════════════════════════════════ */}
       <section
         ref={processRef}
-        className="relative w-full px-6 md:px-16 py-32"
+        className="relative w-full h-fit px-6 md:px-16 py-32"
       >
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-emerald-600/[0.04] blur-[140px]" />
@@ -495,62 +463,51 @@ function AboutSection() {
           </p>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto mb-8 hidden md:block">
-          <div
-            ref={processLineRef}
-            className="h-px w-full origin-left bg-gradient-to-r from-violet-500/50 via-violet-500/20 to-transparent"
-          />
-        </div>
+        {/* Stepper */}
+        <div className="relative z-10 max-w-5xl mx-auto">
+          {/* Connector line */}
+          <div className="hidden md:block absolute top-8 left-[calc(12.5%+20px)] right-[calc(12.5%+20px)] h-0.5 bg-white/[0.06]">
+            <div
+              ref={processLineRef}
+              className="h-full origin-left bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500"
+            />
+          </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {process.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={i}
-                ref={(el) => (processCardsRef.current[i] = el)}
-                className="group relative border border-white/[0.06] rounded-2xl bg-white/[0.02] p-8 md:p-10
-                           hover:bg-white/[0.04] hover:border-violet-500/20 transition-all duration-500"
-              >
-                <span className="text-6xl font-black text-white/[0.04] block mb-6 select-none leading-none">
-                  {item.num}
-                </span>
-                <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center mb-5 group-hover:bg-violet-500/20 transition-colors duration-300">
-                  <Icon className="w-5 h-5 text-violet-400" />
+          <div className="relative grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-0">
+            {process.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={i}
+                  ref={(el) => (processCardsRef.current[i] = el)}
+                  className="group flex flex-col items-center text-center"
+                >
+                  {/* Circle with icon */}
+                  <div className="relative z-10 w-16 h-16 rounded-full bg-[#0a0a0f] border-2 border-violet-500/50 flex items-center justify-center mb-6 group-hover:border-violet-400 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-300">
+                    <Icon className="w-6 h-6 text-violet-400 group-hover:text-violet-300 transition-colors duration-300" />
+                  </div>
+
+                  {/* Step number */}
+                  <span className="text-xs font-mono text-violet-500/60 tracking-widest mb-2">
+                    {item.num}
+                  </span>
+
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-gray-500 leading-relaxed max-w-[200px]">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-white">
-                  {item.title}
-                </h3>
-                <ArrowRight className="absolute bottom-8 right-8 w-5 h-5 text-violet-500/0 group-hover:text-violet-500/50 translate-x-2 group-hover:translate-x-0 transition-all duration-500" />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 6 — CLOSING QUOTE
-      ═══════════════════════════════════════════ */}
-      <section className="relative flex items-center justify-center min-h-[60vh] w-full px-6">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-violet-600/[0.06] blur-[150px]" />
-        </div>
-
-        <div ref={closingRef} className="relative z-10 text-center max-w-3xl">
-          <div className="h-px w-20 mx-auto bg-gradient-to-r from-transparent via-violet-500/50 to-transparent mb-12" />
-          <p className="text-3xl md:text-5xl font-light text-gray-300 leading-snug">
-            I don&rsquo;t just write code —
-            <br />
-            <span className="text-white font-semibold">
-              I engineer systems that{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
-                stand the test of production
-              </span>
-              .
-            </span>
-          </p>
-        </div>
-      </section>
     </div>
   );
 }

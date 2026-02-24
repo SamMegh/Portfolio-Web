@@ -33,12 +33,11 @@ function App() {
           {/* <Cursor /> */}
           {/* <Navbar /> */}
           <div id="smooth-content">
-            {/* <HomeScreen />
+            <HomeScreen />
               <ProjectScreen />
-            {isMobile ?<ThreePillorScreenMobile/>: <ThreePillorScreen />}
-            <Contact /> */}
-            <div className="h-screen"></div>
             <AboutSection/>
+            {isMobile ?<ThreePillorScreenMobile/>: <ThreePillorScreen />}
+            <Contact />
           </div>
         </div>
     </div>
