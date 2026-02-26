@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-const projects = await import("../assets/data/projects.json", {
+const projects = import("../assets/data/projects.json", {
   assert: { type: "json" }
 }).then((module) => module.default);
 
