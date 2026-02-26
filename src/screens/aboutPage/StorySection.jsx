@@ -14,7 +14,7 @@ function StorySection() {
     <section ref={storyRef} className="relative h-fit w-full">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-blue-600/[0.05] blur-[140px]" />
-        <div className="absolute bottom-20 left-0 w-[400px] h-[400px] rounded-full bg-violet-600/[0.05] blur-[120px]" />
+        <div className="absolute bottom-20 left-0 w-[400px] h-[400px] rounded-full bg-emerald-600/[0.05] blur-[120px]" />
       </div>
 
       <div className="sticky top-0 mb-20 flex items-center justify-center px-6 md:px-16">

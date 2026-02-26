@@ -19,9 +19,9 @@ function ThreePillorScreenMobile() {
           <div
             className="bg-[#111111] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-1
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
+                      hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
-            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+            <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
 
             <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
               Full-Stack Engineering
@@ -43,9 +43,9 @@ function ThreePillorScreenMobile() {
           <div
             className="bg-[#111111] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-2
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
+                      hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
-            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+            <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
 
             <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
               Web Penetration Testing
@@ -67,9 +67,9 @@ function ThreePillorScreenMobile() {
           <div
             className="bg-[#111111] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-3
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
+                      hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
-            <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+            <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
 
             <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
               Mobile Development

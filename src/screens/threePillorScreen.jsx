@@ -86,7 +86,7 @@ function ThreePillorScreen() {
         <section>
           <div className="introDiv mb-10">
             <h1 className="introItems t-4xl md:text-6xl text-center font-bold text-white leading-tight">
-              I Build What Others <span className="text-violet-400">Can’t Break</span> 
+              I Build What Others <span className="text-emerald-400">Can’t Break</span> 
             </h1>
             <p className="introItems text-gray-500  text-center tracking-[0.25em] uppercase font-medium">
               Three disciplines. One standard of excellence.
@@ -99,11 +99,11 @@ function ThreePillorScreen() {
           <div
             className="bg-[#111111] border z-10 border-white/10 h-110 flex justify-between flex-col w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-1
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
+                      hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
             <div>
               {" "}
-              <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+              <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
               <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
                 Mobile Development
               </h1>
@@ -138,10 +138,10 @@ function ThreePillorScreen() {
           <div
             className="bg-[#111111] border z-20 border-white/10 h-110 flex justify-between flex-col w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-2
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
+                      hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
             <div>
-              <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+              <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
 
               <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
                 Full-Stack Engineering
@@ -179,10 +179,10 @@ function ThreePillorScreen() {
           <div
             className="bg-[#111111] border z-10 border-white/10 h-110 flex justify-between flex-col  w-80 rounded-2xl p-8 pt-10 absolute top-5 pillor-3
                       shadow-[0_15px_40px_rgba(0,0,0,0.8)]
-                      hover:border-violet-500/60 hover:-translate-y-2
+                      hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
             <div>
-              <div className="h-[2px] w-14 bg-violet-500 mb-6"></div>
+              <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
 
               <h1 className="text-2xl font-semibold text-white mb-4 tracking-wide">
                 Web Penetration Testing

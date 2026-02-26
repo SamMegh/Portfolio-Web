@@ -22,8 +22,8 @@ function PrinciplesSection() {
        
        {/* core principle */}
           <div className="flex items-center gap-3">
-            <div className="h-px w-10 bg-gradient-to-r from-violet-500 to-transparent" />
-            <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-violet-400/80">
+            <div className="h-px w-10 bg-gradient-to-r from-emerald-500 to-transparent" />
+            <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-emerald-400/80">
               Core Principles
             </span>
           </div>
@@ -31,7 +31,7 @@ function PrinciplesSection() {
           {/* heading */}
         <h2 className="text-5xl md:text-7xl font-bold text-white leading-[0.95] tracking-tight mb-4">
             What I
-            <span className="bg-gradient-to-r from-violet-400 via-violet-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent">
                Stand For
             </span>
           </h2>

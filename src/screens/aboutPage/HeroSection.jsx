@@ -33,7 +33,7 @@ function HeroSection() {
           className="text-[clamp(2.8rem,8vw,7rem)] font-bold leading-[0.95] tracking-tight text-white"
         >
           The{" "}
-          <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             Blueprint
           </span>
         </h1>
@@ -47,7 +47,7 @@ function HeroSection() {
 
         <div
           ref={heroLineRef}
-          className="mx-auto mt-10 h-px w-48 origin-center bg-gradient-to-r from-transparent via-violet-500/60 to-transparent"
+          className="mx-auto mt-10 h-px w-48 origin-center bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent"
         />
       </div>
     </section>

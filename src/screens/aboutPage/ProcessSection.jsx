@@ -16,7 +16,7 @@ function ProcessSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto mb-20">
-        <span className="text-[11px] tracking-[0.25em] uppercase text-violet-400 font-medium">
+        <span className="text-[11px] tracking-[0.25em] uppercase text-emerald-400 font-medium">
           Workflow
         </span>
         <h2 className="mt-3 text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -33,7 +33,7 @@ function ProcessSection() {
         <div className="hidden md:block absolute top-8 left-[calc(12.5%+20px)] right-[calc(12.5%+20px)] h-0.5 bg-white/[0.06]">
           <div
             ref={processLineRef}
-            className="h-full origin-left bg-gradient-to-r from-violet-500 via-violet-400 to-violet-500"
+            className="h-full origin-left bg-gradient-to-r from-emerald-500 via-emerald-400 to-emerald-600"
           />
         </div>
 
@@ -47,12 +47,12 @@ function ProcessSection() {
                 className="group flex flex-col items-center text-center"
               >
                 {/* Circle with icon */}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-[#0a0a0f] border-2 border-violet-500/50 flex items-center justify-center mb-6 group-hover:border-violet-400 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-300">
-                  <Icon className="w-6 h-6 text-violet-400 group-hover:text-violet-300 transition-colors duration-300" />
+                <div className="relative z-10 w-16 h-16 rounded-full bg-[#0a0a0f] border-2 border-emerald-500/50 flex items-center justify-center mb-6 group-hover:border-emerald-400 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300">
+                  <Icon className="w-6 h-6 text-emerald-400 group-hover:text-emerald-300 transition-colors duration-300" />
                 </div>
 
                 {/* Step number */}
-                <span className="text-xs font-mono text-violet-500/60 tracking-widest mb-2">
+                <span className="text-xs font-mono text-emerald-500/60 tracking-widest mb-2">
                   {item.num}
                 </span>
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-import HomeScreen from "./screens/HomeScreen";
+import HomeScreen from "./screens/homePage/HomeScreen";
 import gsap from "gsap";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
