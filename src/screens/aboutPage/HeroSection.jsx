@@ -50,11 +50,6 @@ function HeroSection() {
           className="mx-auto mt-10 h-px w-48 origin-center bg-gradient-to-r from-transparent via-violet-500/60 to-transparent"
         />
       </div>
-
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600">
-        <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-gray-600 to-transparent animate-pulse" />
-      </div>
     </section>
   );
 }

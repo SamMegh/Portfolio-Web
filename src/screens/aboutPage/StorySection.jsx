@@ -17,17 +17,9 @@ function StorySection() {
         <div className="absolute bottom-20 left-0 w-[400px] h-[400px] rounded-full bg-violet-600/[0.05] blur-[120px]" />
       </div>
 
-      <div className="sticky top-0 mb-30 flex items-center justify-center px-6 md:px-16">
+      <div className="sticky top-0 mb-20 flex items-center justify-center px-6 md:px-16">
         <div className="relative z-10 max-w-4xl">
-          {/* blinking cursor styled label */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-3 h-3 rounded-full bg-violet-500 animate-pulse" />
-            <span className="text-[11px] tracking-[0.25em] uppercase text-violet-400/70 font-mono">
-              loading_philosophy.txt
-            </span>
-          </div>
-
-          <p
+       <p
             className="text-[clamp(1.2rem,2.8vw,2rem)] leading-[1.9] text-white/90"
             style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", letterSpacing: "0.02em" }}
           >

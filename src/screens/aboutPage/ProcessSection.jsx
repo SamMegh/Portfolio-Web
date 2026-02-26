@@ -22,7 +22,7 @@ function ProcessSection() {
         <h2 className="mt-3 text-4xl md:text-6xl font-bold text-white leading-tight">
           From Idea to Execution
         </h2>
-        <p className="mt-4 text-gray-500 text-lg max-w-lg">
+        <p className="mt-4 text-gray-500 text-sm md:text-lg max-w-lg">
           Every project follows a structured path — no guesswork, no shortcuts, just results.
         </p>
       </div>

@@ -18,24 +18,28 @@ function PrinciplesSection() {
       </div>
 
       {/* section header */}
-      <div className="relative z-10 max-w-7xl mx-auto mb-24 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-        <div>
-          <div className="flex items-center gap-3 mb-6">
+      <div className="relative z-10 max-w-7xl mx-auto mb-24 flex flex-col md:flex-col md:items-start gap-2">
+       
+       {/* core principle */}
+          <div className="flex items-center gap-3">
             <div className="h-px w-10 bg-gradient-to-r from-violet-500 to-transparent" />
             <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-violet-400/80">
               Core Principles
             </span>
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold text-white leading-[0.95] tracking-tight">
-            What I<br />
+          <div className="flex flex-col">
+          {/* heading */}
+        <h2 className="text-5xl md:text-7xl font-bold text-white leading-[0.95] tracking-tight mb-4">
+            What I
             <span className="bg-gradient-to-r from-violet-400 via-violet-500 to-blue-500 bg-clip-text text-transparent">
-              Stand For
+               Stand For
             </span>
           </h2>
-        </div>
-        <p className="max-w-sm text-gray-500 text-sm leading-relaxed md:text-right md:pb-2">
+          {/* discription */}
+        <p className=" text-gray-500 text-sm md:text-lg max-w-lg">
           The non-negotiable standards that define every line of code I write and every system I deliver.
         </p>
+        </div>
       </div>
 
       {/* Interactive Tilt Cards */}
