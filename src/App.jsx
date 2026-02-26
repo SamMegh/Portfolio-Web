@@ -27,10 +27,10 @@ function App() {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="overflow-x-hidden cursor-none">
+    <div id="smooth-wrapper" className="overflow-x-hidden">
       {/* smooth-content MUST be a direct child of smooth-wrapper */}
       <div id="smooth-content">
-        <Cursor />
+        {/* <Cursor /> */}
         {/* <Navbar /> */}
         <HomeScreen />
         {!isMobile&&<ProjectScreen />}
