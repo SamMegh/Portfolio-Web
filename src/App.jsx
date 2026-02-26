@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div id="smooth-wrapper" className="overflow-x-hidden">
+    <div id="smooth-wrapper" className="overflow-x-hidden cursor-none">
       {/* smooth-content MUST be a direct child of smooth-wrapper */}
       <div id="smooth-content">
         <Cursor />
