@@ -31,7 +31,7 @@ function App() {
       {/* smooth-content MUST be a direct child of smooth-wrapper */}
       <div id="smooth-content">
         <Cursor />
-        <Navbar />
+        {/* <Navbar /> */}
         <HomeScreen />
         {!isMobile&&<ProjectScreen />}
         <AboutSection/>
