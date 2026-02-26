@@ -1,7 +1,7 @@
 
 function ThreePillorScreenMobile() {
   return (
-      <div className="h-screen">
+      <div className="">
         {/* intro section */}
         <section>
           <div>

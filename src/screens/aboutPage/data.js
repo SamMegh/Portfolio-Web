@@ -2,7 +2,7 @@ import { Shield, Cpu, Layers, Code2, Zap, Target } from "lucide-react";
 
 export const stats = [
   { value: 15, suffix: "+", label: "Projects Delivered" },
-  { value: 3, suffix: "+", label: "Years Building" },
+  { value: 2, suffix: "+", label: "Years Building" },
   { value: 100, suffix: "%", label: "Client Satisfaction" },
   { value: 10, suffix: "+", label: "Tech Stacks" },
 ];
