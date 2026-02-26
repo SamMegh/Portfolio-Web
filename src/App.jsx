@@ -28,18 +28,16 @@ function App() {
 
   return (
     <div id="smooth-wrapper" className="overflow-x-hidden">
-
-        <div style={{opacity:1}} >
-          {/* <Cursor /> */}
-          {/* <Navbar /> */}
-          <div id="smooth-content">
-            <HomeScreen />
-              <ProjectScreen />
-            <AboutSection/>
-            {isMobile ?<ThreePillorScreenMobile/>: <ThreePillorScreen />}
-            <Contact />
-          </div>
-        </div>
+      {/* smooth-content MUST be a direct child of smooth-wrapper */}
+      <div id="smooth-content">
+        <Cursor />
+        <Navbar />
+        <HomeScreen />
+        {!isMobile&&<ProjectScreen />}
+        <AboutSection/>
+        {isMobile ?<ThreePillorScreenMobile/>: <ThreePillorScreen />}
+        <Contact />
+      </div>
     </div>
   );
 }

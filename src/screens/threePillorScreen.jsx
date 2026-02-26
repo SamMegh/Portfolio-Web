@@ -85,7 +85,7 @@ function ThreePillorScreen() {
         {/* intro section */}
         <section>
           <div className="introDiv mb-10">
-            <h1 className="introItems t-4xl md:text-6xl text-center font-bold text-white leading-tight">
+            <h1 className="introItems text-4xl md:text-6xl text-center font-bold text-white leading-tight">
               I Build What Others <span className="text-emerald-400">Can’t Break</span> 
             </h1>
             <p className="introItems text-gray-500  text-center tracking-[0.25em] uppercase font-medium">
