@@ -234,7 +234,7 @@ function HomeScreen() {
         <TopStatusBar topBarRefs={topBarRefs} />
 
         {/* ░░░ Main hero content ░░░ */}
-        <div className=" relative z-[5] h-full flex flex-col sm:flex-row items-center justify-center px-5 sm:px-12 lg:px-20 gap-4 sm:gap-10 pt-14 sm:pt-0">
+        <div className="relative z-[5] h-full flex flex-col sm:flex-row items-center justify-center sm:justify-between px-5 sm:px-12 lg:px-24 gap-4 sm:gap-8 pt-14 sm:pt-0">
 
           {/* ── Image + Social (order-first on mobile) ── */}
           <HeroImage

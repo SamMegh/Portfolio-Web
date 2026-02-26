@@ -40,7 +40,6 @@
 /* Ambient gradient orbs */
 .hero-orb {
   opacity: 0;
-  rounded-full: 50%;
   border-radius: 50%;
   pointer-events: none;
   filter: blur(60px);

@@ -31,7 +31,7 @@ function HeroTextContent({
             <span
               key={`n1-${i}`}
               ref={(el) => (nameChars1.current[i] = el)}
-              className="hero-char text-[clamp(3.2rem,12vw,9.5rem)] font-black leading-[0.92] tracking-[-0.03em] text-white inline-block opacity-0"
+              className="hero-char  text-[clamp(3.2rem,12vw,9.5rem)] font-black leading-[0.92] text-white inline-block opacity-0"
               style={{ perspective: "600px" }}
             >
               {char}
@@ -47,7 +47,7 @@ function HeroTextContent({
             <span
               key={`n2-${i}`}
               ref={(el) => (nameChars2.current[i] = el)}
-              className="hero-char hero-name-outline text-[clamp(3.2rem,12vw,9.5rem)] font-black leading-[0.92] tracking-[-0.03em] inline-block opacity-0"
+              className="hero-char hero-name-outline text-[clamp(3.2rem,12vw,9.5rem)] font-black leading-[0.92] inline-block opacity-0"
               style={{ perspective: "600px" }}
             >
               {char}

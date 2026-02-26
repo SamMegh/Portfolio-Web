@@ -2,7 +2,7 @@ import { SOCIALS } from "./constants";
 
 function HeroImage({ imgWrapRef, imgRef, badgeRef, socialRefs, profilePhoto }) {
   return (
-    <div className="order-1 sm:order-2 flex items-center gap-5 sm:gap-8 sm:flex-1 justify-center">
+    <div className="order-1 sm:order-2 flex items-center gap-5 sm:gap-8 justify-center sm:justify-end">
       {/* Profile photo with clip-path reveal */}
       <div
         ref={imgWrapRef}
@@ -15,7 +15,7 @@ function HeroImage({ imgWrapRef, imgRef, badgeRef, socialRefs, profilePhoto }) {
           ref={imgRef}
           src={profilePhoto}
           alt="Ankit Megh"
-          className="hero-profile-img relative w-[170px] h-[170px] sm:w-[290px] sm:h-[290px] lg:w-[340px] lg:h-[340px] rounded-full object-cover border border-white/10 shadow-2xl"
+          className="hero-profile-img relative w-[170px] h-[170px] sm:w-[290px] sm:h-[290px] lg:w-[400px] lg:h-[400px] rounded-full object-cover border border-white/10 shadow-2xl"
         />
         {/* Experience badge */}
         <div
