@@ -56,12 +56,12 @@ export default function Navbar() {
           x: 50,
         });
         tl.to(".mainNavToShow", {
-          backgroundColor: "rgba(255,255,255,0.1)",
+          backgroundColor: "rgba(var(--white-rgb), 0.1)",
           backdropFilter: "blur(8px)",
           borderWidth: "1px",
           borderRadius: "24px",
           padding: "8px 5px",
-          borderColor: "rgba(255,255,255,0.3)",
+          borderColor: "rgba(var(--white-rgb), 0.3)",
           duration: 0.5,
           height:"55px",
           minWidth:"300px"

@@ -81,7 +81,7 @@ export default function NeonText() {
           rounded-full
           bg-black/10
           backdrop-blur-[4px]
-          shadow-[12px_12px_18px_rgba(103,232,249,0.8)]"
+          shadow-[12px_12px_18px_rgba(var(--cyan-rgb),0.8)]"
         />
 
         {/* Text container */}

@@ -107,7 +107,7 @@ function HeroTextContent({
         <button
           ref={(el) => (ctaRefs.current[0] = el)}
           onClick={() => scrollTo("#ProjectsSection")}
-          className="hero-cta-primary opacity-0 px-7 sm:px-9 py-3 bg-white text-black text-xs sm:text-sm font-semibold tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.15)] hover:scale-105 active:scale-95"
+          className="hero-cta-primary opacity-0 px-7 sm:px-9 py-3 bg-white text-black text-xs sm:text-sm font-semibold tracking-wider uppercase rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(var(--white-rgb),0.15)] hover:scale-105 active:scale-95"
         >
           View Projects
         </button>

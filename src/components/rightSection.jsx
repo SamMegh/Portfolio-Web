@@ -120,12 +120,12 @@ function RightSection({ className }) {
     ripple.style.top = `${y}px`;
     ripple.style.width = `20px`;
     ripple.style.height = `20px`;
-    ripple.style.background = "rgba(255,255,255,1)";
+    ripple.style.background = "rgba(var(--white-rgb), 1)";
     ripple.style.borderRadius = "50%";
     ripple.style.pointerEvents = "none";
     ripple.style.transform = "translate(-50%, -50%) scale(0)";
     ripple.style.zIndex = "15";
-    ripple.style.boxShadow = "0 0 30px rgba(255,255,255,0.45)";
+    ripple.style.boxShadow = "0 0 30px rgba(var(--white-rgb), 0.45)";
 
     item.appendChild(ripple);
 

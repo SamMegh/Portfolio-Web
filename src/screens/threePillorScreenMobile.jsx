@@ -17,8 +17,8 @@ function ThreePillorScreenMobile() {
         <section className="w-screen h-fit flex flex-col gap-10 justify-center items-center relative">
           {/* Full Stack */}
           <div
-            className="bg-[#111111] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-1
-                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+            className="bg-[var(--bg-card)] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-1
+                      shadow-[0_15px_40px_rgba(var(--black-rgb),0.8)]
                       hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
             <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
@@ -41,8 +41,8 @@ function ThreePillorScreenMobile() {
           </div>
           {/* Security */}
           <div
-            className="bg-[#111111] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-2
-                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+            className="bg-[var(--bg-card)] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-2
+                      shadow-[0_15px_40px_rgba(var(--black-rgb),0.8)]
                       hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
             <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>
@@ -65,8 +65,8 @@ function ThreePillorScreenMobile() {
           </div>
           {/* Mobile */}
           <div
-            className="bg-[#111111] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-3
-                      shadow-[0_15px_40px_rgba(0,0,0,0.8)]
+            className="bg-[var(--bg-card)] border border-white/10 h-100 w-70 rounded-2xl p-8 top-5 pillor-3
+                      shadow-[0_15px_40px_rgba(var(--black-rgb),0.8)]
                       hover:border-emerald-500/60 hover:-translate-y-2
                       transition-all duration-500">
             <div className="h-[2px] w-14 bg-emerald-500 mb-6"></div>

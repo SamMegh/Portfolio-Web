@@ -80,7 +80,7 @@ const CurvedLoop = ({
 
   return (
     <div className='skillSection select-none'>
-      <hr className="border-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60 my-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+      <hr className="border-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60 my-2 shadow-[0_0_10px_rgba(var(--blue-rgb),0.5)]" />
       <div
         ref={containerRef}
         className="h-fit p-2 flex items-center justify-center w-full relative overflow-hidden"
@@ -117,7 +117,7 @@ const CurvedLoop = ({
         </div>
       
       </div>
-      <hr className="border-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60 my-2 shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
+      <hr className="border-0 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60 my-2 shadow-[0_0_10px_rgba(var(--purple-rgb),0.5)]" />
     </div>
     
   );

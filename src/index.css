@@ -16,10 +16,10 @@
 
 /* Highlight active project card */
 .active-project {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 4px 32px 0 rgba(168, 237, 234, 0.3), 0 1.5px 8px 0 rgba(254, 214, 227, 0.2);
-  border-color: #fff;
-  color: #222;
+  background-color: rgba(var(--white-rgb), 0.2) !important;
+  box-shadow: 0 4px 32px 0 rgba(var(--glow-teal-rgb), 0.3), 0 1.5px 8px 0 rgba(var(--glow-pink-rgb), 0.2);
+  border-color: var(--text-primary);
+  color: var(--text-inverse);
   transition: background-color 0.8s;
 }
 
@@ -28,25 +28,93 @@ body {
   padding: 0;
 }
 
+/* 
+dark theam 
+
+
+  /* ═══ BACKGROUNDS ═══ */
+  /* --bg-primary: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card-alt: #0a0a0f;
+  --bg-card-start: #12121a;
+  --bg-card-end: #0d0d14;
+  --bg-grid: #1a1a1a;
+  --bg-grid-thick: #333333; */
+
+  /* ═══ TEXT ═══ */
+  /* --text-primary: #ffffff;
+  --text-inverse: #222222; */
+
+*/
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* ═══ BACKGROUNDS ═══ */
+  --bg-primary: #0a0a0a;
+  --bg-card: #111111;
+  --bg-card-alt: #0a0a0f;
+  --bg-card-start: #12121a;
+  --bg-card-end: #0d0d14;
+  --bg-grid: #1a1a1a;
+  --bg-grid-thick: #333333;
+
+  /* ═══ TEXT ═══ */
+  --text-primary: #ffffff;
+  --text-inverse: #222222;
+
+  /* ═══ ACCENT — change these to retheme the entire site ═══ */
+  --accent-300: #6ee7b7;
+  --accent-400: #34d399;
+  --accent-500: #10b981;
+  --accent-600: #059669;
+
+  /* ═══ SECONDARY COLORS ═══ */
+  --indigo-500: #6366f1;
+  --purple-500: #a855f7;
+  --purple-600: #9333ea;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --violet-600: #7c3aed;
+  --cyan-400: #22d3ee;
+  --yellow-400: #facc15;
+
+  /* ═══ PRINCIPLE CARD ACCENTS ═══ */
+  --principle-1: #a78bfa;
+  --principle-2: #60a5fa;
+  --principle-3: #34d399;
+  --principle-4: #fbbf24;
+
+  /* ═══ NEON GLOW PALETTE ═══ */
   --very-white: #ECF0F1;
   --very-light: #BDC3C7;
   --light: #7F8C8D;
   --little-blue: #34495E;
   --very-blue: #2C3E50;
 
+  /* ═══ RGB CHANNELS (for rgba with custom opacity) ═══ */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --accent-400-rgb: 52, 211, 153;
+  --accent-500-rgb: 16, 185, 129;
+  --indigo-rgb: 99, 102, 241;
+  --purple-rgb: 168, 85, 247;
+  --blue-rgb: 59, 130, 246;
+  --cyan-rgb: 103, 232, 249;
+  --glow-teal-rgb: 168, 237, 234;
+  --glow-pink-rgb: 254, 214, 227;
 }
 
 #smooth-wrapper {
-  background-color: #0a0a0a;
+  background-color: var(--bg-primary);
   background-image:
-    linear-gradient(#1a1a1a 1px, transparent 1px),
-    linear-gradient(90deg, #1a1a1a 1px, transparent 1px),
-    linear-gradient(#333 2px, transparent 2px),
-    linear-gradient(90deg, #333 2px, transparent 2px);
+    linear-gradient(var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px),
+    linear-gradient(var(--bg-grid-thick) 2px, transparent 2px),
+    linear-gradient(90deg, var(--bg-grid-thick) 2px, transparent 2px);
   background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 /* top most page glow ui css */

@@ -134,7 +134,7 @@ export default function WelcomeComponent() {
             ref={(el) => (flyingLettersRef.current[i] = el)}
             className="absolute text-white text-[5vw] font-bold"
             style={{
-              textShadow: "0 0 10px #BDC3C7, 0 0 20px #BDC3C7",
+              textShadow: "0 0 10px var(--very-light), 0 0 20px var(--very-light)",
             }}
           >
             {letter}

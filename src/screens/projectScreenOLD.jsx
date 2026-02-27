@@ -227,13 +227,13 @@ export default function ProjectTab() {
             <div
               key={i}
               ref={(el) => (projectsRef.current[i] = el)}
-              className="project opacity-0 flex flex-col sm:flex-row items-center justify-center text-center sm:text-leftp-6 gap-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-[2px] border border-white rounded-lg shadow-mdmin-w-full sm:min-w-[800px] h-[80vh] sm:h-auto min-w-full transition-colors duration-300"
+              className="project opacity-0 flex flex-col sm:flex-row items-center justify-center text-center sm:text-leftp-6 gap-6 bg-[rgba(var(--white-rgb),0.1)] backdrop-blur-[2px] border border-white rounded-lg shadow-mdmin-w-full sm:min-w-[800px] h-[80vh] sm:h-auto min-w-full transition-colors duration-300"
             >
               {/* Image section */}
               <div className="w-full sm:w-[500px] p-2">
                 <div className="w-full h-[200px] sm:h-[300px] overflow-hidden rounded-md">
                   {proj.imgUrl == "none" ? (
-                    <div className="flex flex-col h-full bg-[rgba(0,0,0,0.2)] backdrop-blur-[20px] items-center justify-center px-6  text-center">
+                    <div className="flex flex-col h-full bg-[rgba(var(--black-rgb),0.2)] backdrop-blur-[20px] items-center justify-center px-6  text-center">
                       <h2 className="text-2xl font-semibold text-white mb-3">
                         No Image Provided
                       </h2>

@@ -179,7 +179,7 @@ function ProjectScreen() {
             className="project-line-left my-5 h-[2px] w-full origin-right"
             style={{
               background:
-                "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 30%, rgba(52,211,153,0.8) 100%)",
+                "linear-gradient(90deg, transparent 0%, rgba(var(--white-rgb),0.15) 30%, rgba(var(--accent-400-rgb),0.8) 100%)",
               transform: "scaleX(0)",
             }}
           />
@@ -211,7 +211,7 @@ function ProjectScreen() {
             className="project-line-right h-[2px] w-full origin-left"
             style={{
               background:
-                "linear-gradient(90deg, rgba(52,211,153,0.8) 0%, rgba(255,255,255,0.15) 70%, transparent 100%)",
+                "linear-gradient(90deg, rgba(var(--accent-400-rgb),0.8) 0%, rgba(var(--white-rgb),0.15) 70%, transparent 100%)",
               transform: "scaleX(0)",
             }}
           />

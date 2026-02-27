@@ -38,7 +38,7 @@ function HeroImage({ imgWrapRef, imgRef, badgeRef, socialRefs, profilePhoto }) {
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="hero-social-icon opacity-0 p-2.5 rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-white/30 hover:text-white hover:bg-white/5 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.08)]"
+              className="hero-social-icon opacity-0 p-2.5 rounded-full border border-white/10 text-white/40 transition-all duration-300 hover:border-white/30 hover:text-white hover:bg-white/5 hover:scale-110 hover:shadow-[0_0_20px_rgba(var(--white-rgb),0.08)]"
               title={s.label}
             >
               <Icon size={18} />

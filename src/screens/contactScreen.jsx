@@ -64,11 +64,11 @@ function Contact() {
         style: {
           background: "transparent",
           backdropFilter: "blur(4px)",
-          border: "1px solid rgba(255, 255, 255, 0.3)",
+          border: "1px solid rgba(var(--white-rgb), 0.3)",
           borderRadius: "8px",
           fontSize: "16px",
           padding: "12px 24px",
-          color: "#ffffff",
+          color: "var(--text-primary)",
           fontWeight: "500",
         },
       }).showToast();
@@ -83,11 +83,11 @@ function Contact() {
         style: {
           background: "transparent",
           backdropFilter: "blur(4px)",
-          border: "1px solid rgba(255, 255, 255, 0.3)",
+          border: "1px solid rgba(var(--white-rgb), 0.3)",
           borderRadius: "8px",
           fontSize: "16px",
           padding: "12px 24px",
-          color: "#ffffff",
+          color: "var(--text-primary)",
           fontWeight: "500",
         },
       }).showToast();
