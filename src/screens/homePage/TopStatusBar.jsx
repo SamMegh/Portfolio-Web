@@ -1,6 +1,6 @@
 function TopStatusBar({ topBarRefs }) {
   return (
-    <div className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center px-5 sm:px-12 py-5">
+    <div className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center px-5 sm:px-20 py-5">
       <div ref={(el) => (topBarRefs.current[0] = el)} className="flex items-center gap-2.5 opacity-0">
         <span className="relative flex h-2.5 w-2.5">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />

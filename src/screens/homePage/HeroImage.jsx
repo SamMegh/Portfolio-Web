@@ -15,7 +15,7 @@ function HeroImage({ imgWrapRef, imgRef, badgeRef, socialRefs, profilePhoto }) {
           ref={imgRef}
           src={profilePhoto}
           alt="Ankit Megh"
-          className="hero-profile-img relative w-[170px] h-[170px] sm:w-[290px] sm:h-[290px] lg:w-[400px] lg:h-[400px] rounded-full object-cover border border-white/10 shadow-2xl"
+          className="hero-profile-img relative w-[220px] h-[220px] sm:w-[290px] sm:h-[290px] lg:w-[400px] lg:h-[400px] rounded-full object-cover border border-white/10 shadow-2xl"
         />
         {/* Experience badge */}
         <div
