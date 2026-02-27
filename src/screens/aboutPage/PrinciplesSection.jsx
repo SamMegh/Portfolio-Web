@@ -10,7 +10,7 @@ function PrinciplesSection() {
   usePrincipleAnimation({ principleCardsRef });
 
   return (
-    <section ref={principleSectionRef} className="relative w-full py-32 px-6 md:px-16">
+    <section ref={principleSectionRef} className="relative w-full pt-32 px-6 md:px-16">
       {/* ambient glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-violet-600/[0.04] blur-[150px]" />

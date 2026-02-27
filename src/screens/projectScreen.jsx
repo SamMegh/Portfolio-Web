@@ -161,7 +161,7 @@ function ProjectScreen() {
       {/* ── Pinned project showcase ─────────────────────── */}
       <div
         ref={sectionRef}
-        className="project-section h-screen flex items-center justify-center relative overflow-hidden"
+        className="project-section h-screen flex items-center justify-center relative overflow-hidden mb-30"
       >
         {/* ── Left panel: slides out from image ───────────── */}
         <div className="project-left-panel absolute left-[8%] text-center top-1/2 -translate-y-1/2 z-10 max-w-sm opacity-0">

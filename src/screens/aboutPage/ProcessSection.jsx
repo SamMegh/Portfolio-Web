@@ -47,7 +47,7 @@ function ProcessSection() {
                 className="group flex flex-col items-center text-center"
               >
                 {/* Circle with icon */}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-[var(--bg-card-alt)] border-2 border-emerald-500/50 flex items-center justify-center mb-6 group-hover:border-emerald-400 group-hover:shadow-[0_0_20px_rgba(var(--accent-500-rgb),0.3)] transition-all duration-300">
+                <div className="relative z-10 w-16 h-16 rounded-full bg-card-alt border-2 border-emerald-500/50 flex items-center justify-center mb-6 group-hover:border-emerald-400 group-hover:shadow-[0_0_20px_rgba(var(--accent-500-rgb),0.3)] transition-all duration-300">
                   <Icon className="w-6 h-6 text-emerald-400 group-hover:text-emerald-300 transition-colors duration-300" />
                 </div>
 
