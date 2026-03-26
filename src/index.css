@@ -70,6 +70,12 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--bg-primary);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
 }
 
 /* 
@@ -164,6 +170,9 @@ dark theam
 }
 
 #smooth-wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   background-color: var(--bg-primary);
   background-image:
     linear-gradient(var(--bg-grid) 1px, transparent 1px),
@@ -172,6 +181,14 @@ dark theam
     linear-gradient(90deg, var(--bg-grid-thick) 2px, transparent 2px);
   background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
   color: var(--text-primary);
+}
+
+/* Constrain content width on large displays */
+#smooth-content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* top most page glow ui css */

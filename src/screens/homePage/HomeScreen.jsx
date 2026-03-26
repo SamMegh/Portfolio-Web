@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import profilePhoto from "../../assets/Profile_Photo.png";
@@ -27,27 +27,38 @@ function HomeScreen() {
   const lineRef = useRef(null);
   const techRefs = useRef([]);
   const badgeRef = useRef(null);
+  const [isLaptop, setIsLaptop] = useState(() => typeof window !== "undefined" && window.innerWidth >= 1024);
 
   const name1 = "ANKIT";
   const name2 = "MEGH";
 
   // ─── Master Entrance Timeline ──────────────────────────────────
   useEffect(() => {
+    const handleResize = () => setIsLaptop(window.innerWidth >= 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ─── Master Entrance Timeline ──────────────────────────────────
+  useEffect(() => {
+    if (!isLaptop) return;
+
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.2 });
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.05 });
 
       // 1 ▸ Top bar
       tl.fromTo(
         topBarRefs.current.filter(Boolean),
         { y: -20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.12 }
+        { y: 0, opacity: 1, duration: 0.55, stagger: 0.1 }
       );
 
       // 2 ▸ Greeting line
       tl.fromTo(
         greetingRef.current,
         { x: -40, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.6 },
+        { x: 0, opacity: 1, duration: 0.45 },
         "-=0.4"
       );
 
@@ -55,23 +66,23 @@ function HomeScreen() {
       tl.fromTo(
         nameChars1.current.filter(Boolean),
         { y: 120, opacity: 0, rotationX: -90 },
-        { y: 0, opacity: 1, rotationX: 0, duration: 1, stagger: 0.06, ease: "back.out(2)" },
-        "-=0.3"
+        { y: 0, opacity: 1, rotationX: 0, duration: 0.7, stagger: 0.05, ease: "back.out(2)" },
+        "-=0.25"
       );
 
       // 4 ▸ Name line 2 — staggered with slight delay
       tl.fromTo(
         nameChars2.current.filter(Boolean),
         { y: 120, opacity: 0, rotationX: -90 },
-        { y: 0, opacity: 1, rotationX: 0, duration: 1, stagger: 0.06, ease: "back.out(2)" },
-        "-=0.8"
+        { y: 0, opacity: 1, rotationX: 0, duration: 0.7, stagger: 0.05, ease: "back.out(2)" },
+        "-=0.6"
       );
 
       // 5 ▸ Gradient accent line scales in
       tl.fromTo(
         lineRef.current,
         { scaleX: 0 },
-        { scaleX: 1, duration: 0.8, ease: "power2.inOut" },
+        { scaleX: 1, duration: 0.55, ease: "power2.inOut" },
         "-=0.5"
       );
 
@@ -79,7 +90,7 @@ function HomeScreen() {
       tl.fromTo(
         roleRef.current,
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5 },
+        { y: 0, opacity: 1, duration: 0.35 },
         "-=0.4"
       );
 
@@ -87,7 +98,7 @@ function HomeScreen() {
       tl.fromTo(
         descRef.current,
         { y: 25, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6 },
+        { y: 0, opacity: 1, duration: 0.45 },
         "-=0.3"
       );
 
@@ -95,7 +106,7 @@ function HomeScreen() {
       tl.fromTo(
         techRefs.current.filter(Boolean),
         { y: 15, opacity: 0, scale: 0.85 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.4, stagger: 0.05 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.3, stagger: 0.05 },
         "-=0.3"
       );
 
@@ -103,7 +114,7 @@ function HomeScreen() {
       tl.fromTo(
         ctaRefs.current.filter(Boolean),
         { y: 25, opacity: 0, scale: 0.9 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.5, stagger: 0.12 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.35, stagger: 0.1 },
         "-=0.25"
       );
 
@@ -111,7 +122,25 @@ function HomeScreen() {
       tl.fromTo(
         imgWrapRef.current,
         { clipPath: "circle(0% at 50% 50%)" },
-        { clipPath: "circle(72% at 50% 50%)", duration: 1.2, ease: "power3.inOut" },
+        { clipPath: "circle(72% at 50% 50%)", duration: 0.9, ease: "power3.inOut" },
+        "-=1"
+      );
+
+      // 10b ▸ Pixel-to-HD ramp on the photo itself
+      tl.fromTo(
+        imgRef.current,
+        {
+          filter: "contrast(0.75) saturate(0.75) brightness(0.9) blur(12px)",
+          scale: 0.96,
+        },
+        {
+          filter: "contrast(1) saturate(1) brightness(1) blur(0px)",
+          scale: 1,
+          duration: 0.7,
+          ease: "power3.out",
+          onStart: () => imgRef.current?.classList.add("pixelate-start"),
+          onComplete: () => imgRef.current?.classList.remove("pixelate-start"),
+        },
         "-=1"
       );
 
@@ -119,7 +148,7 @@ function HomeScreen() {
       tl.fromTo(
         badgeRef.current,
         { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(3)" },
+        { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(3)" },
         "-=0.4"
       );
 
@@ -127,7 +156,7 @@ function HomeScreen() {
       tl.fromTo(
         orbRefs.current.filter(Boolean),
         { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 1.2, stagger: 0.15, ease: "elastic.out(1, 0.5)" },
+        { scale: 1, opacity: 1, duration: 0.8, stagger: 0.12, ease: "elastic.out(1, 0.5)" },
         "-=1"
       );
 
@@ -135,7 +164,7 @@ function HomeScreen() {
       tl.fromTo(
         socialRefs.current.filter(Boolean),
         { x: 30, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.4, stagger: 0.07 },
+        { x: 0, opacity: 1, duration: 0.3, stagger: 0.06 },
         "-=0.8"
       );
 
@@ -143,14 +172,14 @@ function HomeScreen() {
       tl.fromTo(
         scrollIndRef.current,
         { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.5 },
+        { opacity: 1, y: 0, duration: 0.35 },
         "-=0.3"
       );
 
       // ── Continuous looping animations ───────────────────────────
       gsap.to(scrollIndRef.current, {
         y: 10,
-        duration: 1.5,
+        duration: 1.2,
         ease: "sine.inOut",
         yoyo: true,
         repeat: -1,
@@ -159,10 +188,12 @@ function HomeScreen() {
     }, heroRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isLaptop]);
 
   // ─── Role Text Cycling ─────────────────────────────────────────
   useEffect(() => {
+    if (!isLaptop) return;
+
     let idx = 0;
     const interval = setInterval(() => {
       if (!roleRef.current) return;
@@ -185,10 +216,11 @@ function HomeScreen() {
       });
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isLaptop]);
 
   // ─── Mouse Parallax (desktop) ─────────────────────────────────
   useEffect(() => {
+    if (!isLaptop) return;
     if (window.innerWidth < 768) return;
 
     const onMove = (e) => {
@@ -215,7 +247,7 @@ function HomeScreen() {
 
     window.addEventListener("mousemove", onMove);
     return () => window.removeEventListener("mousemove", onMove);
-  }, []);
+  }, [isLaptop]);
 
   // ─── Helpers ───────────────────────────────────────────────────
   const scrollTo = (target) => {
@@ -223,6 +255,10 @@ function HomeScreen() {
   };
 
   // ─── Render ────────────────────────────────────────────────────
+  if (!isLaptop) {
+    return <div className="min-h-screen bg-black" />;
+  }
+
   return (
     <div className="Main-screen" ref={heroRef}>
       <section className="relative h-screen overflow-hidden select-none">

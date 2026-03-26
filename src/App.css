@@ -56,6 +56,11 @@
   border-color: rgba(var(--white-rgb), 0.2);
 }
 
+/* Temporary pixelation used for the HD ramp reveal */
+.pixelate-start {
+  image-rendering: pixelated;
+}
+
 /* CTA primary — shimmer effect */
 .hero-cta-primary {
   position: relative;
