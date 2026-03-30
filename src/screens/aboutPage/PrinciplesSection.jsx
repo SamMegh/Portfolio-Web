@@ -30,7 +30,7 @@ function PrinciplesSection() {
           <div className="flex flex-col">
           {/* heading */}
         <h2 className="text-5xl md:text-7xl font-bold text-white leading-[0.95] tracking-tight mb-4">
-            What I
+            What I&nbsp;
             <span className="bg-gradient-to-r from-emerald-400 via-emerald-500 to-emerald-600 bg-clip-text text-transparent">
                Stand For
             </span>
