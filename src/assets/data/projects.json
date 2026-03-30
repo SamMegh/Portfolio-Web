@@ -2,29 +2,57 @@
     {
         "name": "Vaani",
         "services": "React + Node.js",
+        "techStack": ["React", "Node.js", "Express", "MongoDB"],
+        "features": [
+            "Smart contextual chat flow",
+            "Custom command handling",
+            "Responsive conversation UI",
+            "GitHub-first deployment"
+        ],
         "description": "A chatbot project designed for smarter conversations with extended capabilities compared to typical chatbots.",
-        "imgUrl": "https://github.com/SamMegh/Vaani/blob/main/ScreenShot/Screenshot%202025-09-08%20231804.png?raw=true",
+        "imgUrl": "https://github.com/SamMegh/Vaani/blob/main/client/public/model.png?raw=true",
         "readMoreLink": "https://github.com/SamMegh/Vaani"
     },
     {
         "name": "MY Chat Website",
         "services": "React + Vite",
+        "techStack": ["React", "Vite", "JavaScript", "CSS"],
+        "features": [
+            "Real-time style chat interface",
+            "Reply, copy and delete actions",
+            "Mobile-friendly layout",
+            "Simple and clean UX"
+        ],
         "description": "A web-based chat platform inspired by Instagram and WhatsApp. Features include chat, reply, delete, and copy options for seamless communication.",
-        "imgUrl": "https://github.com/SamMegh/MyChat-Website/blob/main/ScreenShot/screenshot0.png?raw=true",
+        "imgUrl": "https://github.com/SamMegh/Vaani/blob/main/client/public/model.png?raw=true",
         "readMoreLink": "https://github.com/SamMegh/MyChat-Website"
     },
     {
         "name": "MY Chat App",
         "services": "Flutter (Dart)",
+        "techStack": ["Flutter", "Dart", "Firebase"],
+        "features": [
+            "Cross-platform mobile support",
+            "Fast and lightweight chat flow",
+            "Clean message layout",
+            "Simple onboarding"
+        ],
         "description": "A cross-platform chat app built with Flutter for Android, iOS, and Chrome. Focused on simplicity and fast messaging.",
-        "imgUrl": "none",
+        "imgUrl": "https://github.com/SamMegh/Vaani/blob/main/client/public/model.png?raw=true",
         "readMoreLink": "https://github.com/SamMegh/MyChat-App"
     },
     {
         "name": "Knockout Football League",
         "services": "React Native + Expo",
+        "techStack": ["React Native", "Expo", "Expo Router", "JavaScript"],
+        "features": [
+            "Match outcome prediction game",
+            "Compete with friend groups",
+            "Lifeline-based strategy",
+            "Leaderboard-style interaction"
+        ],
         "description": "A football league app where users predict outcomes (win/loss/draw), compete with friends, and use lifelines. Built with React Native and Expo Router.",
-        "imgUrl": "none",
+        "imgUrl": "https://github.com/SamMegh/Vaani/blob/main/client/public/model.png?raw=true",
         "readMoreLink": "https://github.com/SamMegh/KNOCKOUT-FootBall-ReactNative"
     }
 ]
