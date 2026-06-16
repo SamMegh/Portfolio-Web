@@ -157,7 +157,7 @@ function HomeScreenMobile() {
   };
 
   return (
-    <div ref={containerRef} className="Main-screen">
+    <div ref={containerRef} className="Main-screen overflow-hidden">
       <section className="relative min-h-screen overflow-hidden  flex flex-col select-none">
 
         {/* Ambient orbs */}

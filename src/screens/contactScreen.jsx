@@ -155,7 +155,7 @@ function Contact() {
         </motion.div>
 
         {/* Bottom Credits */}
-        <div className="w-full flex items-center justify-between text-[9px] sm:text-[10px] tracking-[0.25em] text-gray-500 mt-4">
+        <div className="w-full flex items-center flex-col sm:flex-row justify-between text-[9px] sm:text-[10px] tracking-[0.25em] text-gray-500 mt-4">
           <p>
             <span className="font-semibold"> Email.</span> <span className="font-bold text-sm select-all cursor-pointer hover:text-white transition-colors" onClick={handleEmailCopy}>sam.megh0305@gmail.com</span>
           </p>
