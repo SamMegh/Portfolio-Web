@@ -7,6 +7,7 @@ import GradientOrbs from "./GradientOrbs";
 import TopStatusBar from "./TopStatusBar";
 import HeroImage from "./HeroImage";
 import HeroTextContent from "./HeroTextContent";
+import HomeScreenMobile from "./HomeScreenMobile";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -256,7 +257,7 @@ function HomeScreen() {
 
   // ─── Render ────────────────────────────────────────────────────
   if (!isLaptop) {
-    return <div className="min-h-screen bg-black" />;
+    return <HomeScreenMobile />;
   }
 
   return (
